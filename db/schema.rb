@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_02_105841) do
+ActiveRecord::Schema.define(version: 2022_05_02_111038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 2022_05_02_105841) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_surveys_on_user_id"
+  end
+
+  create_table "user_moods", force: :cascade do |t|
+    t.bigint "mood_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["mood_id"], name: "index_user_moods_on_mood_id"
+    t.index ["user_id"], name: "index_user_moods_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,4 +53,6 @@ ActiveRecord::Schema.define(version: 2022_05_02_105841) do
   end
 
   add_foreign_key "surveys", "users"
+  add_foreign_key "user_moods", "moods"
+  add_foreign_key "user_moods", "users"
 end
