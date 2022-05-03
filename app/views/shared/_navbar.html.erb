@@ -1,24 +1,107 @@
-<header class="bg-neediegreen">
-  <div class="max-w-full p-4 w">
-    <div class="flex items-center justify-between space-x-4 lg:space-x-10">
-      <div class="flex lg:w-0 lg:flex-1">
-        <%= link_to "Needie", root_path, class:"text-5xl text-white font-headings hover:text-lightgreen" %>
+<nav class="
+  relative
+  w-full
+  flex
+  justify-between
+  py-4
+  bg-neediegreen
+  text-white
+  navbar navbar-expand-lg navbar-light
+  ">
+  <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+        <div class="flex lg:w-0 lg:flex-1">
+        <%= link_to "Needie", root_path, class:"text-5xl text-white font-headings" %>
       </div>
 
-      <div class="sm:flex items-center justify-between space-x-2">
-        <div class="text-white">
-          <%= link_to "Sign Up", new_user_registration_path, class:"inline-block text-sm font-headings px-4 py-2 leading-none border rounded-2xl border-white hover:border-transparent hover:bg-white hover:text-neediegreen" %>
-        </div>
-        <div class="text-white">
-          <%= link_to "Login", new_user_session_path, class:"inline-block text-sm font-headings px-4 py-2 leading-none border rounded-2xl border-white hover:border-transparent hover:bg-white hover:text-neediegreen" %>
-        </div>
-        <div class="text-white">
-          <%= link_to "Log Out", destroy_user_session_path, :method => :delete, class: "inline-block text-sm font-headings px-4 py-2 leading-none border rounded-2xl border-white hover:border-transparent hover:bg-white hover:text-neediegreen"%>
-        </div>
-                <div class="text-white">
-          <%= link_to "Profile", root_path, class: "inline-block text-sm font-headings px-4 py-2 leading-none border rounded-2xl border-white hover:border-transparent hover:bg-white hover:text-neediegreen"%>
-        </div>
-      </div>
-    </div>
+  <!-- Right elements -->
+  <div class="flex items-center relative">
+  <div class="dropstart relative">
+    <a class="dropdown-toggle flex items-center hidden-arrow" href="#" id="dropdownMenuButton" role="button"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-full"
+        style="height: 45px; width: 45px" alt="user avatar" />
+    </a>
+    <ul class="
+    dropdown-menu
+    min-w-max
+    absolute
+    hidden
+    bg-white
+    text-base
+    z-50
+    float-left
+    py-2
+    list-none
+    text-left
+    rounded-lg
+    shadow-lg
+    mt-1
+    hidden
+    m-0
+    bg-clip-padding
+    border-none
+    left-auto
+    right-0
+  " aria-labelledby="dropdownMenuButton">
+       <li>
+        <%= link_to "My Profile", root_path, class:"
+        dropdown-item
+        text-sm
+        py-2
+        px-4
+        font-normal
+        block
+        w-full
+        whitespace-nowrap
+        bg-transparent
+        text-gray-700
+        hover:bg-gray-100" %>
+      </li>
+      <li>
+        <%= link_to "Sign Up", new_user_registration_path, class:"
+        dropdown-item
+        text-sm
+        py-2
+        px-4
+        font-normal
+        block
+        w-full
+        whitespace-nowrap
+        bg-transparent
+        text-gray-700
+        hover:bg-gray-100" %>
+      </li>
+      <li>
+        <%= link_to "Login", new_user_session_path, class:"
+        dropdown-item
+        text-sm
+        py-2
+        px-4
+        font-normal
+        block
+        w-full
+        whitespace-nowrap
+        bg-transparent
+        text-gray-700
+        hover:bg-gray-100" %>
+      </li>
+      <li>
+        <%= link_to "Log Out", destroy_user_session_path, class:"
+        dropdown-item
+        text-sm
+        py-2
+        px-4
+        font-normal
+        block
+        w-full
+        whitespace-nowrap
+        bg-transparent
+        text-gray-700
+        hover:bg-gray-100" %>
+      </li>
+    </ul>
   </div>
-</header>
+  </div>
+  <!-- Right elements -->
+  </div>
+</nav>
