@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+happy = Mood.create(name: 'Happy')
+
+
+
+reading = Reading.create(text: "this is a reading this is a reading this is a reading this is a reading")
+
+therapy = Therapy.new(category: 'Affirmations')
+therapy.content = reading
+therapy.mood = happy
+therapy.save
+
+
+reading = Reading.create(text: "this is a reading this is a reading this is a reading this is a reading")
+therapy = Therapy.new(category: 'Good Vibes', sub_category: "Articles")
+therapy.content = reading
+therapy.mood = happy
+therapy.save
