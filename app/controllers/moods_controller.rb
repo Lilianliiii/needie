@@ -6,7 +6,7 @@ class MoodsController < ApplicationController
   end
 
   def show
-    # @mood = Mood.find(params[:id])
+    @mood = Mood.find(params[:id])
   end
 
   def audio

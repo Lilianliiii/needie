@@ -1,2 +1,14 @@
-<h1> Moods page</h1>>
-<p> Choose emoji</p>
+<div class="p-5">
+  <h1 class="font-headings font-bold text-lg">Welcome to Needie</h1>
+  <h1 class="font-headings">How are you feeling today?</h1>
+</div>
+
+<div class="grid lg:flex justify-center flex-wrap">
+  <% @moods.each do |mood| %>
+    <%= link_to mood_path(mood) do %>
+      <div class="p-3 lg:w-52 text-center border m-5 justify-between">
+        <h5 class="font-headings"><%= mood.name%></h5>
+      </div>
+    <% end %>
+  <% end %>
+</div>
