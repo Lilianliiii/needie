@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Mood.destroy_all
 happy = Mood.create(name: 'Happy')
 meh = Mood.create(name: 'Meh')
 annoyed = Mood.create(name: 'Annoyed')

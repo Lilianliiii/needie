@@ -5,7 +5,7 @@ class MoodsController < ApplicationController
   end
 
   def show
-    @mood = Mood.find(params [:id])
+    @mood = Mood.find(params[:id])
   end
 
   # user cannot CREATE a NEW mood or EDIT or Update or Destroy
