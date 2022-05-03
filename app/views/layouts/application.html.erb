@@ -11,12 +11,14 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
     <%= yield %>
-    <h1 class="p-5 bg-indigo-400 rouded-xl w-2/5">Hello World</h1>
   </body>
 
 </html>
