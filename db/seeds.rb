@@ -7,19 +7,22 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 happy = Mood.create(name: 'Happy')
+meh = Mood.create(name: 'Meh')
+annoyed = Mood.create(name: 'Annoyed')
+anxious = Mood.create(name: 'Anxious')
+angry = Mood.create(name: 'Angry')
+sad = Mood.create(name: 'Sad')
 
 
-
-reading = Reading.create(text: "this is a reading this is a reading this is a reading this is a reading")
-
-therapy = Therapy.new(category: 'Affirmations')
-therapy.content = reading
-therapy.mood = happy
-therapy.save
+# reading = Reading.create(text: "this is a reading this is a reading this is a reading this is a reading")
+# therapy = Therapy.new(category: 'Affirmations')
+# therapy.content = reading
+# therapy.mood = happy
+# therapy.save
 
 
-reading = Reading.create(text: "this is a reading this is a reading this is a reading this is a reading")
-therapy = Therapy.new(category: 'Good Vibes', sub_category: "Articles")
-therapy.content = reading
-therapy.mood = happy
-therapy.save
+# reading = Reading.create(text: "this is a reading this is a reading this is a reading this is a reading")
+# therapy = Therapy.new(category: 'Good Vibes', sub_category: "Articles")
+# therapy.content = reading
+# therapy.mood = happy
+# therapy.save
