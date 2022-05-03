@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :first_name, :last_name, presence: true
-  has_many :user_moods, :surveys
+  has_many :user_moods
+  has_many :surveys
 end
