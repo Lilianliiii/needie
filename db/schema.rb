@@ -10,13 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_02_111038) do
+ActiveRecord::Schema.define(version: 2022_05_03_075607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "audios", force: :cascade do |t|
+    t.string "link"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "moods", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "readings", force: :cascade do |t|
+    t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -26,6 +38,18 @@ ActiveRecord::Schema.define(version: 2022_05_02_111038) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_surveys_on_user_id"
+  end
+
+  create_table "therapies", force: :cascade do |t|
+    t.bigint "mood_id", null: false
+    t.string "category"
+    t.string "sub_category"
+    t.string "content_type"
+    t.bigint "content_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["content_type", "content_id"], name: "index_therapies_on_content"
+    t.index ["mood_id"], name: "index_therapies_on_mood_id"
   end
 
   create_table "user_moods", force: :cascade do |t|
@@ -53,6 +77,7 @@ ActiveRecord::Schema.define(version: 2022_05_02_111038) do
   end
 
   add_foreign_key "surveys", "users"
+  add_foreign_key "therapies", "moods"
   add_foreign_key "user_moods", "moods"
   add_foreign_key "user_moods", "users"
 end
