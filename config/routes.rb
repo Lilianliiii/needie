@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   resources :moods, only: [ :index, :show, :audio, :movement, :affirmations, :goodvibes]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :survey, only: [ :new, :create]
 end
