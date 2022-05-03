@@ -4,6 +4,14 @@ Rails.application.routes.draw do
   get 'profile', to: 'pages#profile', as: :profile
 
 
-  resources :moods, only: [ :index, :show, :audio, :movement, :affirmations, :goodvibes]
+  resources :moods, only: [ :index, :show] do
+    member do
+      get :audio
+      get :movement
+      get :affirmations
+      get :goodvibes
+    end
+  end
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
