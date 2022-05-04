@@ -1,2 +1,13 @@
-<h1>You scored:____</h1>
-<p>list of resources to help you...</p>
+<%= "You scored: #{@score}" %>
+<p>Here are some resources that might be able to help you...</p>
+<% if @score  >= 0 && @score <= 5 %>
+  <%= render 'no_depression' %>
+<% elsif @score > 5 && @score <= 10 %>
+  <%= render 'normal_but_unhappy' %>
+<% elsif @score > 10 && @score <= 25 %>
+  <%= render 'mild_depression' %>
+<% elsif @score > 25 && @score <= 50%>
+  <%= render 'severe_depression' %>
+<% elsif @score > 50 && @score <= 100%>
+  <%= render 'extreme_depression' %>
+<%end%>
