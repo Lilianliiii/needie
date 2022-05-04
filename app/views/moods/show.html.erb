@@ -2,8 +2,15 @@
 <h1>This is the <%= @mood.name %> page</h1>
 
 <p> Choose type of therapy</p>
-<p>Audio</p>
-<p>Affirmations</p>
-<p>Movement</p>
-<p>Good vibes</p>
 
+
+
+<p><%= link_to "Audio", audio_mood_path %> </p>
+
+<p><%= link_to "Affirmations", affirmations_mood_path%> </p>
+
+<p><%= link_to "Movement", movement_mood_path%></p>
+
+<p><%= link_to "Good vibes", goodvibes_mood_path%></p>
+
+<p><%= link_to "Audio", audio_mood_path %></p>
