@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_03_083602) do
+ActiveRecord::Schema.define(version: 2022_05_04_050053) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,31 @@ ActiveRecord::Schema.define(version: 2022_05_03_083602) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "question_0"
+    t.integer "question_1"
+    t.integer "question_2"
+    t.integer "question_3"
+    t.integer "question_4"
+    t.integer "question_5"
+    t.integer "question_6"
+    t.integer "question_7"
+    t.integer "question_8"
+    t.integer "question_9"
+    t.integer "question_10"
+    t.integer "question_11"
+    t.integer "question_12"
+    t.integer "question_13"
+    t.integer "question_14"
+    t.integer "question_15"
+    t.integer "question_16"
+    t.integer "question_17"
+    t.integer "question_18"
+    t.integer "question_19"
+    t.integer "question_20"
+    t.integer "question_21"
+    t.integer "question_22"
+    t.integer "question_23"
+    t.integer "question_24"
     t.index ["user_id"], name: "index_surveys_on_user_id"
   end
 
