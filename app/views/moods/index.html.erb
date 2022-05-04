@@ -2,12 +2,14 @@
   <h1 class="font-headings font-bold text-lg">Welcome to Needie</h1>
   <h1 class="font-headings">How are you feeling today?</h1>
 </div>
-
-<div class="grid lg:flex justify-center flex-wrap">
+<div class="grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 gap-3 justify-center items-center flex-wrap p-3">
   <% @moods.each do |mood| %>
     <%= link_to mood_path(mood) do %>
-      <div class="p-3 lg:w-52 text-center border m-5 justify-between">
-        <h5 class="font-headings"><%= mood.name%></h5>
+      <div class="p-4 lg:w-52 text-center justify-between">
+      <div class="content-center">
+        <%= cl_image_tag(mood.image) %>
+      </div>
+        <h5 class="font-headings italic justify-center m-3"><%= mood.name%></h5>
       </div>
     <% end %>
   <% end %>
