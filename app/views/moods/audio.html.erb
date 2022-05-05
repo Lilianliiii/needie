@@ -1,3 +1,5 @@
+
+
 <div class="flex justify-center">
   <div class="p-3">
     <%= cl_image_tag("audio_khjy1w", class:"w-24 h-24") %>
@@ -6,6 +8,7 @@
     <h1 class="font-headings text-lg">Which audio option can help you?</h1>
   </div>
 </div>
+
 
 <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-3 flex justify-center items-center p-3">
   <%= link_to "#" do %>
@@ -22,6 +25,28 @@
       <%= cl_image_tag("podcast_praz0v", class:"w-28 h-28") %>
       </div>
         <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Podcast</h5>
-    </div>
+
+      
+      
+      
+      
+<div class="grid lg:grid-cols-2 md:grid-cols-2 gap-3 justify-center items-center flex-wrap">
+  <% @therapies.each do |therapy| %>
+    <%= link_to audio_path(therapy.content) do %>
+      <div class="p-4 m-5 flex border w-1/2">
+        <div class="flex justify-center">
+          <% if therapy.sub_category == "music" %>
+            <%= cl_image_tag("music_rqjazw") %>
+          <% else %>
+          <%# Delete "podcast after putting Podcast image" %>
+             <h1>podcast</h1>  %>
+            <%= cl_image_tag("music_rqjazw") %>
+          <% end %>
+        </div class="justify-center">
+        <div>
+          <h5 class="font-headings text-5xl font-bold text-lightgreen justify-center my-5">Music</h5>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
