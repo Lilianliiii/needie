@@ -6,3 +6,23 @@
     <h1 class="font-headings font-bold text-lg">Which good vibes option can help you?</h1>
   </div>
 </div>
+<div class="grid lg:grid-cols-2 md:grid-cols-2 gap-3 justify-center items-center flex-wrap">
+  <% @therapies.each do |therapy| %>
+    <%= link_to animation_path(therapy.content) do %>
+      <div class="p-4 m-5 flex border w-1/2">
+        <div class="flex justify-center">
+          <% if therapy.sub_category == "joke of the day" %>
+            <%= cl_image_tag("music_rqjazw") %>
+          <% else %>
+          <%# Delete "podcast after putting Podcast image" %>
+             <h1>podcast</h1>  %>
+            <%= cl_image_tag("music_rqjazw") %>
+          <% end %>
+        </div class="justify-center">
+        <div>
+          <h5 class="font-headings text-5xl font-bold text-lightgreen justify-center my-5">Music</h5>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
