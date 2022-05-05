@@ -1,13 +1,21 @@
-<%= "You scored: #{@survey.score}" %>
-<p>Here are some resources that might be able to help you...</p>
-<% if @survey.score  >= 0 && @survey.score <= 5 %>
-  <%= render 'no_depression' %>
-<% elsif @survey.score > 5 && @survey.score <= 10 %>
-  <%= render 'normal_but_unhappy' %>
-<% elsif @survey.score > 10 && @survey.score <= 25 %>
-  <%= render 'mild_depression' %>
-<% elsif @survey.score > 25 && @survey.score <= 50 %>
-  <%= render 'severe_depression' %>
-<% elsif @survey.score > 50 && @survey.score <= 100 %>
-  <%= render 'extreme_depression' %>
-<%end%>
+ <div class="flex justify-center">
+  <div class="lg:w-5/6 lg:m-5 shadow rounded-3xl p-5">
+    <div>
+      <h1 class="text-center font-headings lg:text-2xl text-neediegreen">You scored: <strong><%= @survey.score %></strong></h1>
+    </div>
+
+    <div>
+      <% if @survey.score  >= 0 && @survey.score <= 5 %>
+        <%= render 'no_depression' %>
+      <% elsif @survey.score > 5 && @survey.score <= 10 %>
+        <%= render 'normal_but_unhappy' %>
+      <% elsif @survey.score > 10 && @survey.score <= 25 %>
+        <%= render 'mild_depression' %>
+      <% elsif @survey.score > 25 && @survey.score <= 50 %>
+        <%= render 'severe_depression' %>
+      <% elsif @survey.score > 50 && @survey.score <= 100 %>
+        <%= render 'extreme_depression' %>
+      <%end%>
+    </div>
+  </div>
+</div>
