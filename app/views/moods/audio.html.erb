@@ -5,9 +5,31 @@
     <%= cl_image_tag("audio_khjy1w", class:"w-24 h-24") %>
   </div>
   <div class="justify-center mt-5">
-    <h1 class="font-headings font-bold text-lg">Which audio option can help you?</h1>
+    <h1 class="font-headings text-lg">Which audio option can help you?</h1>
   </div>
 </div>
+
+
+<div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-3 flex justify-center items-center p-3">
+  <%= link_to "#" do %>
+    <div class="justify-center shadow-lg shadow-[#A2D5AB] w-64 h-96 px-3 py-28">
+      <div class="flex justify-center">
+      <%= cl_image_tag("music_rqjazw", class:"w-28 h-28") %>
+      </div>
+        <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Music</h5>
+    </div>
+  <% end %>
+  <%= link_to "#" do %>
+    <div class="justify-center shadow-lg shadow-[#A2D5AB] w-64 h-96 px-3 py-28">
+     <div class="flex justify-center">
+      <%= cl_image_tag("podcast_praz0v", class:"w-28 h-28") %>
+      </div>
+        <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Podcast</h5>
+
+      
+      
+      
+      
 <div class="grid lg:grid-cols-2 md:grid-cols-2 gap-3 justify-center items-center flex-wrap">
   <% @therapies.each do |therapy| %>
     <%= link_to audio_path(therapy.content) do %>
@@ -26,47 +48,5 @@
         </div>
       </div>
     <% end %>
-  <% end %>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="grid lg:grid-cols-2 md:grid-cols-2 gap-3 justify-center items-center flex-wrap">
-  <%# <%= link_to audio_path(@audio) do %> %>
-    <div class="p-4 m-5 flex border w-1/2">
-    <div class="flex justify-center">
-      <%= cl_image_tag("music_rqjazw") %>
-    </div class="justify-center">
-    <div>
-      <h5 class="font-headings text-5xl font-bold text-lightgreen justify-center my-5">Music</h5>
-    </div>
-    </div>
-  <%# <% end %> %>
-  <%= link_to audio_path do %>
-    <div class="p-4 m-5 flex border w-1/2">
-    <div class="flex justify-center">
-      <%= cl_image_tag("music_rqjazw") %>
-    </div class="justify-center">
-    <div>
-      <h5 class="font-headings text-5xl font-bold text-lightgreen justify-center my-5">Music</h5>
-    </div>
-    </div>
   <% end %>
 </div>
