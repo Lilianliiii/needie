@@ -55,6 +55,8 @@
       <h2 class="font-headings mb-3">12. Loneliness</h2>
         <%= f.input :question_11, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_11", onInput:"updateQuestionEleven(this.value)" }  %>
       <div id="question_11" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">13. Spending less time with family or friends</h2>
+        <%= f.input :question_12, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_12", onInput:"updateQuestionTwelve(this.value)" }  %>
       <div id="question_12" class="flex justify-center font-headings text-neediegreen">2</div>
       <h2 class="font-headings mb-3">14. Loss of motivation</h2>
         <%= f.input :question_13, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_13", onInput:"updateQuestionThirteen(this.value)" }  %>
