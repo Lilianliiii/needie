@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'profile', to: 'pages#profile', as: :profile
 
 
-  resources :moods, only: [ :index, :show] do
+  resources :moods, only: [:index, :show] do
     member do
       get :audio
       get :movement
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       get :goodvibes
     end
   end
-
+  resources :audios, only: [:show]
   resources :surveys, only: [ :new, :create, :show ]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
