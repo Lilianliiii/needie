@@ -1,1 +1,13 @@
-<h1>Affirmations page</h1>
+<div class="flex justify-center">
+  <div class="p-3">
+    <%= cl_image_tag("affirmations_or7j1g", class:"w-24 h-24") %>
+  </div>
+  <div class="justify-center mt-5">
+    <h1 class="font-headings font-bold text-lg">Repeat the following:</h1>
+  </div>
+</div>
+<div class="flex justify-center p-5 font-headings">
+  <% @therapies.each do |therapy| %>
+  <%= therapy.content.text %>
+  <% end %>
+</div>
