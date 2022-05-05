@@ -1,1 +1,37 @@
-<h1> Videos </h1>
+<div class="mt-5">
+<% if @video.therapy.sub_category == 'yoga' %>
+  <div class="flex justify-center">
+    <%= cl_image_tag("icon_yoga-01_1_jjptzi", class:"w-28 h-28") %>
+    <div class="m-3">
+      <h1 class="font-headings font-bold text-lg">So you're feeling <%= (@video.therapy.mood.name).downcase %> and you want to do some <%= @video.therapy.sub_category %>?</h1>
+      <h1 class="font-headings">Press play on the following video:</h1>
+    </div>
+  </div>
+  <% elsif @video.therapy.sub_category == 'meditation' %>
+    <div class="flex justify-center">
+      <%= cl_image_tag("meditation_azdo5p", class:"w-28 h-28") %>
+      <div class="m-3">
+        <h1 class="font-headings font-bold text-lg">So you're feeling <%= (@video.therapy.mood.name).downcase %> and you want to do some <%= @video.therapy.sub_category %>?</h1>
+        <h1 class="font-headings">Press play on the following video:</h1>
+      </div>
+    </div>
+  <% elsif @video.therapy.sub_category == 'breathwork' %>
+    <div class="flex justify-center">
+      <%= cl_image_tag("breathwork_eapavr", class:"w-28 h-28") %>
+      <div class="m-3">
+        <h1 class="font-headings font-bold text-lg">So you're feeling <%= (@video.therapy.mood.name).downcase %> and you want to do some <%= @video.therapy.sub_category %>?</h1>
+        <h1 class="font-headings">Press play on the following video:</h1>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="flex justify-center my-5">
+<h1 class="font-headings italic">
+  <%= @video.therapy.content.link %>
+</h1>
+</div>
+
+<video controls width="600" height="600" class="m-5">
+  <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%203373.mp4?raw=true" type="video/mp4">
+</video>
