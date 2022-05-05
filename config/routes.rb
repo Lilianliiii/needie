@@ -13,6 +13,10 @@ Rails.application.routes.draw do
     end
   end
   resources :audios, only: [:show]
+  resources :videos, only: [:show]
+  resources :animations, only: [:show]
+  resources :walks, only: [:show]
+
   resources :surveys, only: [ :new, :create, :show ]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
