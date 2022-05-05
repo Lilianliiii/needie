@@ -89,7 +89,7 @@ puts " Affirmations Created"
 
 puts "Creating Good News "
 happy_news = Reading.create(text: " With his custom bowl, this 12-year-old raised $325,000 for Ukrainian kids")
-good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good News')
+good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = happy_news
 good_vibes_news_therapy.mood = happy
 good_vibes_news_therapy.save
