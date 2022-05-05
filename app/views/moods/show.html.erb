@@ -4,7 +4,7 @@
 </div>
 
 <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-3 justify-center items-center flex-wrap p-3">
-  <%= link_to audio_mood_path do %>
+  <%= link_to audio_mood_path, class:"hover:text-neediegreen" do %>
     <div class="p-4 lg:w-52 text-center justify-between">
     <div class="flex justify-center">
       <%= cl_image_tag("audio_khjy1w") %>
@@ -12,7 +12,7 @@
       <h5 class="font-headings italic justify-center m-3">Audio</h5>
     </div>
   <% end %>
-  <%= link_to affirmations_mood_path do %>
+  <%= link_to affirmations_mood_path, class:"hover:text-neediegreen" do %>
     <div class="p-4 lg:w-52 text-center justify-between">
     <div class="flex justify-center">
       <%= cl_image_tag("affirmations_or7j1g") %>
@@ -20,7 +20,7 @@
       <h5 class="font-headings italic justify-center m-3">Affirmations</h5>
     </div>
   <% end %>
-  <%= link_to movement_mood_path do %>
+  <%= link_to movement_mood_path, class:"hover:text-neediegreen" do %>
     <div class="p-4 lg:w-52 text-center justify-between">
     <div class="flex justify-center">
       <%= cl_image_tag("movement_h7jzjf") %>
@@ -28,7 +28,7 @@
       <h5 class="font-headings italic justify-center m-3">Movement</h5>
     </div>
   <% end %>
-  <%= link_to goodvibes_mood_path do %>
+  <%= link_to goodvibes_mood_path, class:"hover:text-neediegreen" do %>
     <div class="p-4 lg:w-52 text-center justify-between">
     <div class="flex justify-center">
       <%= cl_image_tag("goodvibes_twiive") %>
