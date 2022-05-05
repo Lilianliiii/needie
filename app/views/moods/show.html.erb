@@ -1,16 +1,39 @@
+<div class="pt-5 px-5">
+  <h1 class="font-headings font-bold text-lg">So you're feeling <%= @mood.name %>...</h1>
+  <h1 class="font-headings">Which of the following options can help you?</h1>
+</div>
 
-<h1>This is the <%= @mood.name %> page</h1>
-
-<p> Choose type of therapy</p>
-
-
-
-<p><%= link_to "Audio", audio_mood_path %> </p>
-
-<p><%= link_to "Affirmations", affirmations_mood_path%> </p>
-
-<p><%= link_to "Movement", movement_mood_path%></p>
-
-<p><%= link_to "Good vibes", goodvibes_mood_path%></p>
-
-<p><%= link_to "Audio", audio_mood_path %></p>
+<div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-3 justify-center items-center flex-wrap p-3">
+  <%= link_to audio_mood_path do %>
+    <div class="p-4 lg:w-52 text-center justify-between">
+    <div class="flex justify-center">
+      <%= cl_image_tag("audio_khjy1w") %>
+    </div>
+      <h5 class="font-headings italic justify-center m-3">Audio</h5>
+    </div>
+  <% end %>
+  <%= link_to affirmations_mood_path do %>
+    <div class="p-4 lg:w-52 text-center justify-between">
+    <div class="flex justify-center">
+      <%= cl_image_tag("affirmations_or7j1g") %>
+    </div>
+      <h5 class="font-headings italic justify-center m-3">Affirmations</h5>
+    </div>
+  <% end %>
+  <%= link_to movement_mood_path do %>
+    <div class="p-4 lg:w-52 text-center justify-between">
+    <div class="flex justify-center">
+      <%= cl_image_tag("movement_h7jzjf") %>
+    </div>
+      <h5 class="font-headings italic justify-center m-3">Movement</h5>
+    </div>
+  <% end %>
+  <%= link_to goodvibes_mood_path do %>
+    <div class="p-4 lg:w-52 text-center justify-between">
+    <div class="flex justify-center">
+      <%= cl_image_tag("goodvibes_twiive") %>
+    </div>
+      <h5 class="font-headings italic justify-center m-3">Good Vibes</h5>
+    </div>
+  <% end %>
+</div>
