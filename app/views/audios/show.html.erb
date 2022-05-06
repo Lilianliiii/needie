@@ -1,18 +1,18 @@
-<div class="mt-5">
+<div class="my-3">
 <% if @audio.therapy.sub_category == 'music' %>
-   <div class="flex justify-center">
-    <%= cl_image_tag("music_rqjazw", class:"w-28 h-28") %>
+   <div class="flex justify-center p-3">
+    <%= cl_image_tag("music_rqjazw", class:"w-20 h-20") %>
     <div class="m-3">
-      <h1 class="font-headings font-bold text-lg">So you're feeling <%= (@audio.therapy.mood.name).downcase %> and you want to listen to <%= @audio.therapy.sub_category %>?</h1>
-      <h1 class="font-headings">Press play on the following playlist:</h1>
+      <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@audio.therapy.mood.name).downcase %> and you want to listen to <%= @audio.therapy.sub_category %>?</h1>
+      <h1 class="font-headings lg:text-lg text-sm">Press play on the following playlist:</h1>
     </div>
   </div>
   <% else %>
-    <div class="flex justify-center">
-    <%= cl_image_tag("podcast_praz0v", class:"w-28 h-28") %>
+    <div class="flex justify-center p-3">
+    <%= cl_image_tag("podcast_praz0v", class:"w-20 h-20") %>
     <div class="m-3">
-      <h1 class="font-headings font-bold text-lg">So you're feeling <%= (@audio.therapy.mood.name).downcase %> and you want to listen to a <%= @audio.therapy.sub_category %>?</h1>
-      <h1 class="font-headings">Press play on the follow podcast:</h1>
+      <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@audio.therapy.mood.name).downcase %> and you want to listen to a <%= @audio.therapy.sub_category %>?</h1>
+      <h1 class="font-headings lg:text-lg text-sm">Press play on the follow podcast:</h1>
     </div>
   <% end %>
 </div>

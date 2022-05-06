@@ -7,10 +7,10 @@
   </div>
 </div>
 
-<div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-3 flex justify-center p-3">
+<div class="flex flex-wrap justify-center m-5 md:space-x-20">
   <% @therapies.each do |therapy| %>
-    <%= link_to audio_path(therapy.content) do %>
-      <div class="justify-center shadow-lg shadow-[rgba(57, 174, 169)] w-64 h-96 px-3 py-28">
+    <%= link_to audio_path(therapy.content), class:"flex justify-center" do %>
+      <div class="justify-center shadow-lg shadow-[rgba(57, 174, 169)] w-64 h-96 px-3 py-28 mb-5">
         <% if therapy.sub_category == "music" %>
           <div class="flex justify-center">
             <%= cl_image_tag("music_rqjazw", class:"w-28 h-28") %>
