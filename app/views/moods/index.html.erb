@@ -1,5 +1,5 @@
 <div class="pt-5 px-5">
-  <h1 class="font-headings font-bold text-lg">Welcome to Needie</h1>
+  <h1 class="font-headings font-bold lg:text-lg">Welcome to Needie</h1>
   <h1 class="font-headings">How are you feeling today?</h1>
 </div>
 
@@ -8,16 +8,14 @@
     <%= link_to mood_path(mood), class:"hover:text-neediegreen" do %>
       <div class="p-4 lg:w-52 text-center justify-between">
       <div class="flex justify-center">
-        <%= cl_image_tag(mood.image) %>
-
-
+        <%= cl_image_tag(mood.image, class:"w-28 h-28") %>
       </div>
-        <h5 class="font-headings italic justify-center m-3"><%= mood.name%></h5>
+        <h5 class="font-headings italic justify-center m-3 lg:text-lg"><%= mood.name%></h5>
       </div>
     <% end %>
   <% end %>
 </div>
 
-<div class="flex justify-center m-5">
-<%= link_to "Feeling depressed? Take our quiz to find out", new_survey_path, class: "py-2 px-5 border rounded-3xl text-white bg-neediegreen" %>
+<div class="flex justify-center mb-5">
+<%= link_to "Feeling depressed?", new_survey_path, class: "py-2 px-5 border rounded-3xl text-white bg-neediegreen lg:text-lg text-center" %>
 </div>
