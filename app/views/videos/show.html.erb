@@ -1,37 +1,37 @@
-<div class="my-3">
-<% if @video.therapy.sub_category == 'yoga' %>
-  <div class="flex justify-center p-3">
-    <%= cl_image_tag("icon_yoga-01_1_jjptzi", class:"w-20 h-20") %>
-    <div class="m-3">
-      <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@video.therapy.mood.name).downcase %> and you want to do some <%= @video.therapy.sub_category %>?</h1>
-      <h1 class="font-headings lg:text-lg text-sm">Press play on the following video:</h1>
+<div class="flex justify-center">
+  <div class="lg:w-5/6 lg:m-5 shadow rounded-3xl p-3">
+
+    <div class="my-3">
+    <% if @video.therapy.sub_category == 'yoga' %>
+      <div class="flex justify-center p-3">
+        <%= cl_image_tag("icon_yoga-01_1_jjptzi", class:"w-20 h-20") %>
+        <div class="m-3">
+          <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@video.therapy.mood.name).downcase %> and you want to do some <%= @video.therapy.sub_category %>?</h1>
+          <h1 class="font-headings lg:text-lg text-sm">Press play on the following video:</h1>
+        </div>
+      </div>
+      <% elsif @video.therapy.sub_category == 'meditation' %>
+        <div class="flex justify-center p-3">
+          <%= cl_image_tag("meditation_azdo5p", class:"w-20 h-20") %>
+          <div class="m-3">
+            <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@video.therapy.mood.name).downcase %> and you want to do some <%= @video.therapy.sub_category %>?</h1>
+            <h1 class="font-headings lg:text-lg text-sm">Press play on the following video:</h1>
+          </div>
+        </div>
+      <% elsif @video.therapy.sub_category == 'breathwork' %>
+        <div class="flex justify-center p-3">
+          <%= cl_image_tag("breathwork_eapavr", class:"w-20 h-20") %>
+          <div class="m-3">
+            <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@video.therapy.mood.name).downcase %> and you want to do some <%= @video.therapy.sub_category %>?</h1>
+            <h1 class="font-headings lg:text-lg text-sm">Press play on the following video:</h1>
+          </div>
+        </div>
+      <% end %>
     </div>
+
+    <div class="flex justify-center my-5">
+      <iframe width="853" height="480" src=<%= @video.therapy.content.link %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
   </div>
-  <% elsif @video.therapy.sub_category == 'meditation' %>
-    <div class="flex justify-center p-3">
-      <%= cl_image_tag("meditation_azdo5p", class:"w-20 h-20") %>
-      <div class="m-3">
-        <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@video.therapy.mood.name).downcase %> and you want to do some <%= @video.therapy.sub_category %>?</h1>
-        <h1 class="font-headings lg:text-lg text-sm">Press play on the following video:</h1>
-      </div>
-    </div>
-  <% elsif @video.therapy.sub_category == 'breathwork' %>
-    <div class="flex justify-center p-3">
-      <%= cl_image_tag("breathwork_eapavr", class:"w-20 h-20") %>
-      <div class="m-3">
-        <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@video.therapy.mood.name).downcase %> and you want to do some <%= @video.therapy.sub_category %>?</h1>
-        <h1 class="font-headings lg:text-lg text-sm">Press play on the following video:</h1>
-      </div>
-    </div>
-  <% end %>
 </div>
-
-<div class="flex justify-center my-5">
-<h1 class="font-headings italic">
-  <%= @video.therapy.content.link %>
-</h1>
-</div>
-
-<video controls width="600" height="600" class="m-5">
-  <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%203373.mp4?raw=true" type="video/mp4">
-</video>

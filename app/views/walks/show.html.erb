@@ -1,9 +1,13 @@
-<div class="my-5">
-  <div class="flex justify-center p-3">
-    <%= cl_image_tag("walking_c2qkol", class:"w-20 h-20") %>
-    <div class="m-3">
-      <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@walk.therapy.mood.name).downcase %> and you want to go on a <%= @walk.therapy.sub_category %>?</h1>
-      <h1 class="font-headings lg:text-lg text-sm">Follow the below route:</h1>
+<div class="flex justify-center">
+  <div class="lg:w-5/6 lg:m-5 shadow rounded-3xl p-3">
+    <div class="my-3">
+      <div class="flex justify-center p-3">
+        <%= cl_image_tag("walking_c2qkol", class:"w-20 h-20") %>
+        <div class="m-3">
+          <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@walk.therapy.mood.name).downcase %> and you want to go on a <%= @walk.therapy.sub_category %>?</h1>
+          <h1 class="font-headings lg:text-lg text-sm">Follow the below route:</h1>
+        </div>
+      </div>
     </div>
   </div>
 </div>
