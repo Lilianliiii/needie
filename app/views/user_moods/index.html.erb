@@ -2,17 +2,7 @@
 
 <% @user_moods.each do |user_mood| %>
   <li>
-    <%= p user_mood.mood_id%>
-
-    
-    <%# <%= p user_mood.mood_id.Mood.name%> %>
-
-    <%= p user_mood.mood_id.Mood.name%>
-
-
-    <%= p user_mood.created_at %>
-
-    <%# <%= p Mood.mood_id.name %> %>
+    <%= user_mood.mood.name%>
+    <%= user_mood.created_at.strftime("%A %d %b %Y") %>
   </li>
-
 <% end %>

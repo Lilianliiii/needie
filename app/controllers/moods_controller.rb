@@ -11,8 +11,7 @@ class MoodsController < ApplicationController
     if user_signed_in?
       @user_mood = UserMood.create(user: current_user, mood: @mood)
       flash.now[:notice] = "Your Mood has been logged"
-
-      #render a flash/alert
+      #srender a flash/alert
     end
 
   end
