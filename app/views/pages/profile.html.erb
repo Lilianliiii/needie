@@ -1,4 +1,7 @@
-<%= cl_image_tag current_user.avatar.key, height: 300, width: 400, crop: :fill %>
+<div class="flex">
+  <%= cl_image_tag current_user.avatar.key, height: 300, width: 400, crop: :fill %>
+  <%= link_to "Mood History", user_moods_path %>
+</div>
 
 <div class="mtext-grey bg-white-600 pr-14">
 <div class="lg  w-80">
@@ -65,4 +68,3 @@
    </h2>
   </div>
 </div>
-
