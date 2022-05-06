@@ -19,11 +19,6 @@
                       label: false,
                       input_html: { placeholder:"Your Last Name",
                       class: "font-headings mt-1 mb-4 block w-full rounded-2xl border-neediegreen bg-white focus:border-gray-300 focus:bg-white focus:ring-0" }%>
-          <%= f.input :avatar,
-                      autofocus: true,
-                      label: false,
-                      input_html: { placeholder:"Your Profile Picture",
-                      class: "font-headings mt-1 mb-4 block w-full rounded-2xl border-neediegreen bg-white focus:border-gray-300 focus:bg-white focus:ring-0" }%>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
@@ -40,12 +35,19 @@
                       label: false,
                       input_html: { placeholder:"Your Password Again... For Confirmation",
                       class: "font-headings mt-1 mb-4 block w-full rounded-2xl border-neediegreen bg-white focus:border-gray-300 focus:bg-white focus:ring-0" } %>
+          <span class="font-headings text-neediegreen">Upload your profile picture</span>
+          <%= f.input :avatar, as: :file,
+                      autofocus: true,
+                      label: false,
+                      input_html: { placeholder:"Your Profile Picture",
+                      class: "font-headings mt-1 mb-4 block w-full rounded-2xl border-neediegreen bg-white focus:border-gray-300 focus:bg-white focus:ring-0" }%>
         </div>
 
           <div class="form-actions mt-5 flex justify-center text-headings">
             <%= f.button :submit, "Sign Up", class: "py-2 px-5 border rounded-3xl text-white bg-neediegreen" %>
           </div>
       <% end %>
+
       </div>
     </div>
   </div>

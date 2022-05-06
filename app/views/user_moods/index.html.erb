@@ -1,0 +1,8 @@
+<h1> User Moods Calendar</h1>
+
+<% @user_moods.each do |user_mood| %>
+  <li>
+    <%= user_mood.mood.name%>
+    <%= user_mood.created_at.strftime("%A %d %b %Y") %>
+  </li>
+<% end %>
