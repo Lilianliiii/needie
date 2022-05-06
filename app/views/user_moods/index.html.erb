@@ -1,0 +1,18 @@
+<h1> User Moods Calendar</h1>
+
+<% @user_moods.each do |user_mood| %>
+  <li>
+    <%= p user_mood.mood_id%>
+
+    
+    <%# <%= p user_mood.mood_id.Mood.name%> %>
+
+    <%= p user_mood.mood_id.Mood.name%>
+
+
+    <%= p user_mood.created_at %>
+
+    <%# <%= p Mood.mood_id.name %> %>
+  </li>
+
+<% end %>
