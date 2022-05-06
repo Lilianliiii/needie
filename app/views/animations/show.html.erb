@@ -1,0 +1,10 @@
+<div class="mt-5">
+<% if @animation.therapy.sub_category == 'joke of the day' %>
+  <div class="flex justify-center">
+    <%= cl_image_tag("joke_lcmg27", class:"w-28 h-28") %>
+    <div class="m-3">
+      <h1 class="font-headings font-bold text-lg">So you're feeling <%= (@animation.therapy.mood.name).downcase %> and you want to do some <%= @animation.therapy.sub_category %>?</h1>
+      <h1 class="font-headings">Have some laughs with these animations</h1>
+    </div>
+  </div>
+<% end %>

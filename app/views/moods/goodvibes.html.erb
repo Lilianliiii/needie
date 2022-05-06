@@ -6,3 +6,27 @@
     <h1 class="font-headings text-lg">Which good vibes option can help you?</h1>
   </div>
 </div>
+
+<div class="grid lg:grid-cols-4 md:grid-cols-2 justify-center p-3">
+  <% @therapies.each do |therapy| %>
+    <% if therapy.content_type == 'Reading' %>
+      <%= link_to reading_path(therapy.content) do %>
+      <div class="justify-center shadow-lg shadow-[#A2D5AB] w-64 h-96 px-3 py-28 mb-5">
+        <div class="flex justify-center">
+          <%= cl_image_tag("article_adl4ov", class:"w-28 h-28") %>
+        </div>
+        <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Good News from Around the World</h5>
+      <% end %>
+      </div>
+    <% elsif therapy.content_type == 'Animation' %>
+      <%= link_to animation_path(therapy.content) do %>
+      <div class="justify-center shadow-lg shadow-[#A2D5AB] w-64 h-96 px-3 py-28 mb-5">
+        <div class="flex justify-center">
+          <%= cl_image_tag("joke_lcmg27", class:"w-28 h-28") %>
+        </div>
+        <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Joke of the Day</h5>
+      </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

@@ -23,7 +23,7 @@ class MoodsController < ApplicationController
   end
 
   def goodvibes
-    @therapies = @mood.therapies.where(category: "goodvibes")
+    @therapies = @mood.therapies.where(category: "good vibes")
   end
 
   private
