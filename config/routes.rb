@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :animations, only: [:show]
   resources :readings, only: [:show]
   resources :walks, only: [:show]
+  resources :user_moods, only: [:index]
 
   resources :surveys, only: [ :new, :create, :show ]
 
