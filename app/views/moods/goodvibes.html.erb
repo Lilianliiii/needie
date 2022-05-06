@@ -6,24 +6,3 @@
     <h1 class="font-headings text-lg">Which good vibes option can help you?</h1>
   </div>
 </div>
-
-
-
-
-<div class="grid lg:grid-cols-4 md:grid-cols-2 justify-center p-3">
-  <% @therapies.each do |therapy| %>
-    <%= link_to reading_path(therapy.content) do %>
-      <% if therapy.sub_category == "good news" %>
-        <div class="flex justify-center">
-          <%= cl_image_tag("icon_yoga-01_1_jjptzi", class:"w-28 h-28") %>
-        </div>
-      <% else %>
-      <%= link_to animation_path(therapy.content) do %>
-          <div class="flex justify-center">
-            <%= cl_image_tag("walking_c2qkol", class:"w-28 h-28") %>
-          </div>
-      <% end %>
-      <% end %>
-    <% end %>
-  <% end %>
-</div>
