@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :audios, only: [:show]
   resources :videos, only: [:show]
   resources :animations, only: [:show]
+  resources :readings, only: [:show]
   resources :walks, only: [:show]
 
   resources :surveys, only: [ :new, :create, :show ]
