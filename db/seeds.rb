@@ -12,6 +12,7 @@ Reading.destroy_all
 Animation.destroy_all
 Walk.destroy_all
 Therapy.destroy_all
+UserMood.destroy_all
 Mood.destroy_all
 
 
