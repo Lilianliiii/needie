@@ -13,13 +13,12 @@
         <%= link_to "Needie", root_path, class:"text-5xl text-white font-headings" %>
       </div>
 
-  <!-- Right elements -->
+<% if user_signed_in? %>
   <div class="flex items-center relative">
   <div class="dropstart relative">
     <a class="dropdown-toggle flex items-center hidden-arrow" href="#" id="dropdownMenuButton" role="button"
       data-bs-toggle="dropdown" aria-expanded="false">
-      <img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" class="rounded-full"
-        style="height: 45px; width: 45px" alt="user avatar" />
+      <%= cl_image_tag current_user.avatar.key, class:"rounded-full h-10 w-10" %>
     </a>
     <ul class="
     dropdown-menu
@@ -59,7 +58,7 @@
         hover:text-neediegreen" %>
       </li>
       <li>
-        <%= link_to "Sign Up", new_user_registration_path, class:"
+        <%= link_to "Edit Profile", edit_user_registration_path, class:"
         dropdown-item
         text-sm
         py-2
@@ -74,22 +73,7 @@
         hover:text-neediegreen" %>
       </li>
       <li>
-        <%= link_to "Login", new_user_session_path, class:"
-        dropdown-item
-        text-sm
-        py-2
-        px-4
-        font-normal
-        block
-        w-full
-        whitespace-nowrap
-        font-headings
-        text-neediegreen
-        hover:bg-gray-100
-        hover:text-neediegreen" %>
-      </li>
-      <li>
-        <%= link_to "Log Out", destroy_user_session_path, class:"
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"
         dropdown-item
         text-sm
         py-2
@@ -106,6 +90,12 @@
     </ul>
   </div>
   </div>
-  <!-- Right elements -->
+  <% else %>
+  <div class="sm:flex items-center justify-between space-x-2">
+    <%= link_to "Login", new_user_session_path, class:"text-sm px-4 py-2 leading-none border-1 rounded-3xl text-white border-white mt-4 md:mt-1" %>
+    <%= link_to "Sign Up", new_user_registration_path, class:"text-sm px-4 py-2 leading-none border-1 rounded-3xl text-white border-white mt-4 md:mt-1" %>
   </div>
+  <% end %>
+  </div>
+
 </nav>
