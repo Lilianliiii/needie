@@ -6,23 +6,22 @@
     <h1 class="font-headings text-lg">Which good vibes option can help you?</h1>
   </div>
 </div>
-<div class="grid lg:grid-cols-2 md:grid-cols-2 gap-3 justify-center items-center flex-wrap">
+<div class="lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-3 flex justify-center p-3">
   <% @therapies.each do |therapy| %>
-    <%= link_to animation_path(therapy.content) do %>
-      <div class="p-4 m-5 flex border w-1/2">
+    <% if therapy.content_type == 'Reading' %>
+      <%= link_to reading_path(therapy.content) do %>
         <div class="flex justify-center">
-          <% if therapy.sub_category == "joke of the day" %>
-            <%= cl_image_tag("music_rqjazw") %>
-          <% else %>
-          <%# Delete "podcast after putting Podcast image" %>
-             <h1>podcast</h1>  %>
-            <%= cl_image_tag("music_rqjazw") %>
-          <% end %>
-        </div class="justify-center">
-        <div>
-          <h5 class="font-headings text-5xl font-bold text-lightgreen justify-center my-5">Music</h5>
+          <%= cl_image_tag("article_adl4ov", class:"w-28 h-28") %>
         </div>
-      </div>
+        <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Good News from Around the World</h5>
+      <% end %>
+    <% elsif therapy.content_type == 'Animation' %>
+      <%= link_to animation_path(therapy.content) do %>
+        <div class="flex justify-center">
+          <%= cl_image_tag("joke_lcmg27", class:"w-28 h-28") %>
+        </div>
+        <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Joke of the Day</h5>
+      <% end %>
     <% end %>
   <% end %>
 </div>
