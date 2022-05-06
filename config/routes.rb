@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'profile', to: 'pages#profile', as: :profile
 
 
-  resources :moods, only: [ :index, :show] do
+  resources :moods, only: [:index, :show] do
     member do
       get :audio
       get :movement
@@ -12,6 +12,11 @@ Rails.application.routes.draw do
       get :goodvibes
     end
   end
+  resources :audios, only: [:show]
+  resources :videos, only: [:show]
+  resources :animations, only: [:show]
+  resources :readings, only: [:show]
+  resources :walks, only: [:show]
 
   resources :surveys, only: [ :new, :create, :show ]
 

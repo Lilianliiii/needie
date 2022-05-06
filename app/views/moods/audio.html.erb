@@ -1,1 +1,28 @@
-<h1>Audio page</h1>
+<div class="flex justify-center">
+  <div class="p-3">
+    <%= cl_image_tag("audio_khjy1w", class:"w-24 h-24") %>
+  </div>
+  <div class="justify-center mt-5">
+    <h1 class="font-headings text-lg">Which audio option can help you?</h1>
+  </div>
+</div>
+
+<div class="flex flex-wrap justify-center m-5 md:space-x-20">
+  <% @therapies.each do |therapy| %>
+    <%= link_to audio_path(therapy.content), class:"flex justify-center" do %>
+      <div class="justify-center shadow-lg shadow-lightgreen w-64 h-96 px-3 py-28 mb-5">
+        <% if therapy.sub_category == "music" %>
+          <div class="flex justify-center">
+            <%= cl_image_tag("music_rqjazw", class:"w-28 h-28") %>
+          </div>
+            <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Music</h5>
+          <% else %>
+          <div class="flex justify-center">
+            <%= cl_image_tag("podcast_praz0v", class:"w-28 h-28") %>
+          </div>
+            <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Podcast</h5>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

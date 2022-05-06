@@ -1,0 +1,207 @@
+ <div class="flex justify-center">
+  <div class="lg:w-5/6 lg:m-5 shadow rounded-3xl p-5">
+    <h1 class="font-headings text-center lg:text-2xl text-neediegreen">This is the <strong>"Burns Depression Checklist"</strong></h1>
+    <h1 class="font-headings text-center lg:text-xl">It is a self assessment to rate your own symptoms for indicators of depression </h1>
+    <br>
+    <h1 class="font-headings lg:text-lg"><strong>Instructions: </strong>Indicate how much you have
+      experienced each symptom during the past week, including today</h1>
+    <p class="italic">Please answer all 25 items</p>
+    <div class="flex justify-center border-neediegreen border-1 rounded-3xl m-3">
+      <ul class="lg:flex sm:flex-wrap justify-center font-headings">
+        <li class="m-3">0 = Not at all</li>
+        <li class="m-3">1 = Somewhat</li>
+        <li class="m-3">2 = Moderately</li>
+        <li class="m-3">3 = A lot</li>
+        <li class="m-3">4 = Extremely</li>
+      </ul>
+    </div>
+
+    <%= simple_form_for @survey do |f| %>
+      <h1 class="font-headings text-neediegreen mb-3">Thoughts and Feelings</h1>
+      <h2 class="font-headings mb-3">1. Feeling sad or down in the dumps</h2>
+        <%= f.input :question_0, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_0", onInput:"updateQuestionZero(this.value)", class:"" } %>
+      <div id="question_0" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">2. Feeling unhappy or blue</h2>
+        <%= f.input :question_1, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_1", onInput:"updateQuestionOne(this.value)" } %>
+      <div id="question_1" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">3. Crying spells or tearfulness</h2>
+        <%= f.input :question_2, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_2", onInput:"updateQuestionTwo(this.value)" } %>
+      <div id="question_2" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">4. Feeling discouraged</h2>
+        <%= f.input :question_3, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_3", onInput:"updateQuestionThree(this.value)" }  %>
+      <div id="question_3" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">5. Feeling hopeless</h2>
+        <%= f.input :question_4, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_4", onInput:"updateQuestionFour(this.value)" }  %>
+      <div id="question_4" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">6. Low self-esteem</h2>
+        <%= f.input :question_5, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_5", onInput:"updateQuestionFive(this.value)" }  %>
+      <div id="question_5" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">7. Feeling worthless or inadequate</h2>
+        <%= f.input :question_6, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_6", onInput:"updateQuestionSix(this.value)" }  %>
+      <div id="question_6" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">8. Guilt or shame</h2>
+        <%= f.input :question_7, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_7", onInput:"updateQuestionSeven(this.value)" }  %>
+      <div id="question_7" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">9. Criticizing yourself or blaming others</h2>
+        <%= f.input :question_8, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_8", onInput:"updateQuestionEight(this.value)" }  %>
+      <div id="question_8" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">10. Difficulty making decisions</h2>
+        <%= f.input :question_9, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_9", onInput:"updateQuestionNine(this.value)" }  %>
+      <div id="question_9" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h1 class="font-headings text-neediegreen mb-3">Activities and Personal Relationships<h1>
+      <h2 class="font-headings mb-3">11. Loss of interest in family, friends or colleagues</h2>
+        <%= f.input :question_10, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_10", onInput:"updateQuestionTen(this.value)" }  %>
+      <div id="question_10" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">12. Loneliness</h2>
+        <%= f.input :question_11, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_11", onInput:"updateQuestionEleven(this.value)" }  %>
+      <div id="question_11" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">13. Spending less time with family or friends</h2>
+        <%= f.input :question_12, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_12", onInput:"updateQuestionTwelve(this.value)" }  %>
+      <div id="question_12" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">14. Loss of motivation</h2>
+        <%= f.input :question_13, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_13", onInput:"updateQuestionThirteen(this.value)" }  %>
+      <div id="question_13" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">15. Loss of interest in work or other activities</h2>
+        <%= f.input :question_14, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_14", onInput:"updateQuestionFourteen(this.value)" }  %>
+      <div id="question_14" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">16. Avoiding work or other activities</h2>
+        <%= f.input :question_15, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_15", onInput:"updateQuestionFifteen(this.value)" }  %>
+      <div id="question_15" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">17. Loss of pleasure or satisfaction in life</h2>
+        <%= f.input :question_16, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_16", onInput:"updateQuestionSixteen(this.value)" }  %>
+      <div id="question_16" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h1 class="font-headings text-neediegreen mb-3">Physical Symptoms</h1>
+      <h2 class="font-headings mb-3">18. Feeling tired</h2>
+        <%= f.input :question_17, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_17", onInput:"updateQuestionSeventeen(this.value)" }  %>
+      <div id="question_17" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">19. Difficulty sleeping or sleeping too much</h2>
+        <%= f.input :question_18, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_18", onInput:"updateQuestionEighteen(this.value)" }  %>
+      <div id="question_18" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">20. Decreased or increased appetite</h2>
+        <%= f.input :question_19, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_19", onInput:"updateQuestionNineteen(this.value)" }  %>
+      <div id="question_19" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">21. Loss of interest in sex</h2>
+        <%= f.input :question_20, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_20", onInput:"updateQuestionTwenty(this.value)" }  %>
+      <div id="question_20" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">22. Worrying about your health</h2>
+        <%= f.input :question_21, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_21", onInput:"updateQuestionTwentyOne(this.value)" }  %>
+      <div id="question_21" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h1 class="font-headings text-neediegreen mb-3">Suicidal Urge</h1>
+      <h2 class="font-headings mb-3">23. Do you have any suicidal thoughts?</h2>
+        <%= f.input :question_22, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_22", onInput:"updateQuestionTwentyTwo(this.value)" }  %>
+      <div id="question_22" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">24. Would you like to end your life?</h2>
+        <%= f.input :question_23, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_23", onInput:"updateQuestionTwentyThree(this.value)" }  %>
+      <div id="question_23" class="flex justify-center font-headings text-neediegreen">2</div>
+      <h2 class="font-headings mb-3">25. Do you have a plan for harming yourself?</h2>
+        <%= f.input :question_24, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_24", onInput:"updateQuestionTwentyFour(this.value)" }  %>
+      <div id="question_24" class="flex justify-center font-headings text-neediegreen">2</div>
+
+      <div class="form-actions mt-3 flex justify-center">
+        <%= f.button :submit, "How depressed at I?", class: "font-headings py-2 px-5 border rounded-3xl text-white bg-neediegreen" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  function updateQuestionZero(value){
+          document.getElementById('question_0').innerText = value
+  }
+
+  function updateQuestionOne(value){
+          document.getElementById('question_1').innerText = value
+  }
+
+  function updateQuestionTwo(value){
+          document.getElementById('question_2').innerText = value
+  }
+
+  function updateQuestionThree(value){
+          document.getElementById('question_3').innerText = value
+  }
+
+  function updateQuestionFour(value){
+          document.getElementById('question_4').innerText = value
+  }
+
+  function updateQuestionFive(value){
+          document.getElementById('question_5').innerText = value
+  }
+
+  function updateQuestionSix(value){
+          document.getElementById('question_6').innerText = value
+  }
+
+  function updateQuestionSeven(value){
+          document.getElementById('question_7').innerText = value
+  }
+
+  function updateQuestionEight(value){
+          document.getElementById('question_8').innerText = value
+  }
+
+  function updateQuestionNine(value){
+          document.getElementById('question_9').innerText = value
+  }
+
+  function updateQuestionTen(value){
+          document.getElementById('question_10').innerText = value
+  }
+
+  function updateQuestionEleven(value){
+          document.getElementById('question_11').innerText = value
+  }
+
+  function updateQuestionTwelve(value){
+          document.getElementById('question_12').innerText = value
+  }
+
+  function updateQuestionThirteen(value){
+          document.getElementById('question_13').innerText = value
+  }
+
+  function updateQuestionFourteen(value){
+          document.getElementById('question_14').innerText = value
+  }
+
+  function updateQuestionFifteen(value){
+          document.getElementById('question_15').innerText = value
+  }
+
+  function updateQuestionSixteen(value){
+          document.getElementById('question_16').innerText = value
+  }
+
+  function updateQuestionSeventeen(value){
+          document.getElementById('question_17').innerText = value
+  }
+
+  function updateQuestionEighteen(value){
+          document.getElementById('question_18').innerText = value
+  }
+
+  function updateQuestionNineteen(value){
+          document.getElementById('question_19').innerText = value
+  }
+
+  function updateQuestionTwenty(value){
+          document.getElementById('question_20').innerText = value
+  }
+
+  function updateQuestionTwentyOne(value){
+          document.getElementById('question_21').innerText = value
+  }
+
+  function updateQuestionTwentyTwo(value){
+          document.getElementById('question_22').innerText = value
+  }
+
+  function updateQuestionTwentyThree(value){
+          document.getElementById('question_23').innerText = value
+  }
+
+  function updateQuestionTwentyFour(value){
+          document.getElementById('question_24').innerText = value
+  }
+</script>

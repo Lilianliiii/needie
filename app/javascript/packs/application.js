@@ -20,3 +20,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 import "stylesheets/application"
+
+function updateQuestionZero(value){
+  document.getElementById('question_0').innerText = value
+}

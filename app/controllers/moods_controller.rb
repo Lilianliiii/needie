@@ -6,7 +6,7 @@ class MoodsController < ApplicationController
   end
 
   def show
-    @mood = Mood.find(params[:id])
+    # @mood = Mood.find(params[:id])
   end
 
   def audio
@@ -23,7 +23,7 @@ class MoodsController < ApplicationController
   end
 
   def goodvibes
-    @therapies = @mood.therapies.where(category: "goodvibes")
+    @therapies = @mood.therapies.where(category: "good vibes")
   end
 
   private
