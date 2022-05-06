@@ -10,7 +10,7 @@
 <div class="flex flex-wrap justify-center m-5 md:space-x-20">
   <% @therapies.each do |therapy| %>
     <%= link_to audio_path(therapy.content), class:"flex justify-center" do %>
-      <div class="justify-center shadow-lg shadow-[rgba(57, 174, 169)] w-64 h-96 px-3 py-28 mb-5">
+      <div class="justify-center shadow-lg shadow-lightgreen w-64 h-96 px-3 py-28 mb-5">
         <% if therapy.sub_category == "music" %>
           <div class="flex justify-center">
             <%= cl_image_tag("music_rqjazw", class:"w-28 h-28") %>

@@ -246,37 +246,37 @@ audio_podcast_therapy.save
 puts "Podcasts Created"
 
 puts "Creating Yoga Videos..."
-happy_yoga = Video.create(link: "https://www.youtube.com/watch?v=NSsAHYTtYbk")
+happy_yoga = Video.create(link: "https://www.youtube.com/embed/NSsAHYTtYbk")
 movement_yoga_therapy = Therapy.new(category: 'movement', sub_category: 'yoga')
 movement_yoga_therapy.content = happy_yoga
 movement_yoga_therapy.mood = happy
 movement_yoga_therapy.save
 
-meh_yoga = Video.create(link: "https://www.youtube.com/watch?v=NSsAHYTtYbk")
+meh_yoga = Video.create(link: "https://www.youtube.com/embed/3F4PB7T4bu8")
 movement_yoga_therapy = Therapy.new(category: 'movement', sub_category: 'yoga')
 movement_yoga_therapy.content = meh_yoga
 movement_yoga_therapy.mood = meh
 movement_yoga_therapy.save
 
-annoyed_yoga = Video.create(link: "https://www.youtube.com/watch?v=NSsAHYTtYbk")
+annoyed_yoga = Video.create(link: "https://www.youtube.com/embed/BPK9WNtpBgk")
 movement_yoga_therapy = Therapy.new(category: 'movement', sub_category: 'yoga')
 movement_yoga_therapy.content = annoyed_yoga
 movement_yoga_therapy.mood = annoyed
 movement_yoga_therapy.save
 
-anx_yoga = Video.create(link: "https://www.youtube.com/watch?v=NSsAHYTtYbk")
+anx_yoga = Video.create(link: "https://www.youtube.com/embed/bJJWArRfKa0")
 movement_yoga_therapy = Therapy.new(category: 'movement', sub_category: 'yoga')
 movement_yoga_therapy.content = anx_yoga
 movement_yoga_therapy.mood = anxious
 movement_yoga_therapy.save
 
-angry_yoga = Video.create(link: "https://www.youtube.com/watch?v=NSsAHYTtYbk")
+angry_yoga = Video.create(link: "https://www.youtube.com/embed/Enz98dDXQfY")
 movement_yoga_therapy = Therapy.new(category: 'movement', sub_category: 'yoga')
 movement_yoga_therapy.content = angry_yoga
 movement_yoga_therapy.mood = angry
 movement_yoga_therapy.save
 
-sad_yoga = Video.create(link: "https://www.youtube.com/watch?v=NSsAHYTtYbk")
+sad_yoga = Video.create(link: "https://www.youtube.com/embed/dmlOV0hZ76w")
 movement_yoga_therapy = Therapy.new(category: 'movement', sub_category: 'yoga')
 movement_yoga_therapy.content = sad_yoga
 movement_yoga_therapy.mood = sad
@@ -285,37 +285,37 @@ movement_yoga_therapy.save
 puts "Yoga Videos Created"
 
 puts "Creating Breathwork Videos..."
-happy_breathwork = Video.create(link: "https://www.youtube.com/watch?v=w2Mi0a5dDhc")
+happy_breathwork = Video.create(link: "https://www.youtube.com/embed/4bIrRKfzrxE")
 movement_breathwork_therapy = Therapy.new(category: 'movement', sub_category: 'breathwork')
 movement_breathwork_therapy.content = happy_breathwork
 movement_breathwork_therapy.mood = happy
 movement_breathwork_therapy.save
 
-meh_breathwork = Video.create(link: "https://www.youtube.com/watch?v=w2Mi0a5dDhc")
+meh_breathwork = Video.create(link: "https://www.youtube.com/embed/w2Mi0a5dDhc")
 movement_breathwork_therapy = Therapy.new(category: 'movement', sub_category: 'breathwork')
 movement_breathwork_therapy.content = meh_breathwork
 movement_breathwork_therapy.mood = meh
 movement_breathwork_therapy.save
 
-annoyed_breathwork = Video.create(link: "https://www.youtube.com/watch?v=w2Mi0a5dDhc")
+annoyed_breathwork = Video.create(link: "https://www.youtube.com/embed/1fNNom3ld1w")
 movement_breathwork_therapy = Therapy.new(category: 'movement', sub_category: 'breathwork')
 movement_breathwork_therapy.content = annoyed_breathwork
 movement_breathwork_therapy.mood = annoyed
 movement_breathwork_therapy.save
 
-anx_breathwork = Video.create(link: "https://www.youtube.com/watch?v=w2Mi0a5dDhc")
+anx_breathwork = Video.create(link: "https://www.youtube.com/embed/tEmt1Znux58")
 movement_breathwork_therapy = Therapy.new(category: 'movement', sub_category: 'breathwork')
 movement_breathwork_therapy.content = anx_breathwork
 movement_breathwork_therapy.mood = anxious
 movement_breathwork_therapy.save
 
-angry_breathwork = Video.create(link: "https://www.youtube.com/watch?v=w2Mi0a5dDhc")
+angry_breathwork = Video.create(link: "https://www.youtube.com/embed/aNXKjGFUlMs")
 movement_breathwork_therapy = Therapy.new(category: 'movement', sub_category: 'breathwork')
 movement_breathwork_therapy.content = angry_breathwork
 movement_breathwork_therapy.mood = angry
 movement_breathwork_therapy.save
 
-sad_breathwork = Video.create(link: "https://www.youtube.com/watch?v=w2Mi0a5dDhc")
+sad_breathwork = Video.create(link: "https://www.youtube.com/embed/HYF0JmKPr6s")
 movement_breathwork_therapy = Therapy.new(category: 'movement', sub_category: 'breathwork')
 movement_breathwork_therapy.content = sad_breathwork
 movement_breathwork_therapy.mood = sad
@@ -323,45 +323,44 @@ movement_breathwork_therapy.save
 
 puts "Breathwork Videos Created"
 
-
 puts "Creating Mediation Videos..."
-happy_breathwork = Video.create(link: "https://www.youtube.com/watch?v=z6X5oEIg6Ak")
+happy_breathwork = Video.create(link: "https://www.youtube.com/embed/inpok4MKVLM")
 movement_meditation_therapy = Therapy.new(category: 'movement', sub_category: 'meditation')
 movement_meditation_therapy.content = happy_breathwork
 movement_meditation_therapy.mood = happy
 movement_meditation_therapy.save
 
-meh_breathwork = Video.create(link: "https://www.youtube.com/watch?v=z6X5oEIg6Ak")
+meh_breathwork = Video.create(link: "https://www.youtube.com/embed/8FhZreiWHG4")
 movement_meditation_therapy = Therapy.new(category: 'movement', sub_category: 'meditation')
 movement_meditation_therapy.content = meh_breathwork
 movement_meditation_therapy.mood = meh
 movement_meditation_therapy.save
 
-annoyed_breathwork = Video.create(link: "https://www.youtube.com/watch?v=z6X5oEIg6Ak")
+annoyed_breathwork = Video.create(link: "https://www.youtube.com/embed/itZMM5gCboo")
 movement_meditation_therapy = Therapy.new(category: 'movement', sub_category: 'meditation')
 movement_meditation_therapy.content = annoyed_breathwork
 movement_meditation_therapy.mood = annoyed
 movement_meditation_therapy.save
 
-anx_breathwork = Video.create(link: "https://www.youtube.com/watch?v=z6X5oEIg6Ak")
+anx_breathwork = Video.create(link: "https://www.youtube.com/embed/O-6f5wQXSu8")
 movement_meditation_therapy = Therapy.new(category: 'movement', sub_category: 'meditation')
 movement_meditation_therapy.content = anx_breathwork
 movement_meditation_therapy.mood = anxious
 movement_meditation_therapy.save
 
-angry_breathwork = Video.create(link: "https://www.youtube.com/watch?v=z6X5oEIg6Ak")
+angry_breathwork = Video.create(link: "https://www.youtube.com/embed/wkse4PPxkk4")
 movement_meditation_therapy = Therapy.new(category: 'movement', sub_category: 'meditation')
 movement_meditation_therapy.content = angry_breathwork
 movement_meditation_therapy.mood = angry
 movement_meditation_therapy.save
 
-sad_breathwork = Video.create(link: "https://www.youtube.com/watch?v=z6X5oEIg6Ak")
+sad_breathwork = Video.create(link: "https://www.youtube.com/embed/2FGR-OspxsU")
 movement_meditation_therapy = Therapy.new(category: 'movement', sub_category: 'meditation')
 movement_meditation_therapy.content = sad_breathwork
 movement_meditation_therapy.mood = sad
 movement_meditation_therapy.save
 
-puts "Breathwork Videos Created"
+puts "Meditation Videos Created"
 
 
 puts "Creating Walks Videos..."

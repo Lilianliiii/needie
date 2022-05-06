@@ -1,1 +1,16 @@
-<h1> SHow the reading here</h1>
+<div class="flex justify-center">
+  <div class="lg:w-5/6 lg:m-5 shadow rounded-3xl p-3">
+    <div class="flex justify-center">
+      <div class="p-3">
+        <%= cl_image_tag("article_adl4ov", class:"w-16 h-16") %>
+      </div>
+      <div class="my-3">
+        <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@reading.therapy.mood.name).downcase %> and you want to hear some good news?</h1>
+        <h1 class="font-headings lg:text-lg text-sm">Read the following:</h1>
+      </div>
+    </div>
+      <div class="flex justify-center p-5 font-headings text-neediegreen">
+        <%= @reading.text %>
+      </div>
+  </div>
+</div>
