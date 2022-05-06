@@ -7,7 +7,6 @@
           <h1 class="font-headings font-bold lg:text-lg text-sm">So you're feeling <%= (@audio.therapy.mood.name).downcase %> and you want to listen to <%= @audio.therapy.sub_category %>?</h1>
           <h1 class="font-headings lg:text-lg text-sm">Press play on the following playlist:</h1>
         </div>
-      </div>
     <% else %>
     <div class="flex justify-center p-3">
       <%= cl_image_tag("podcast_praz0v", class:"w-20 h-20") %>
