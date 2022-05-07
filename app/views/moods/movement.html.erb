@@ -1,47 +1,46 @@
 <div class="flex justify-center">
   <div class="p-3">
-    <%= cl_image_tag("movement_h7jzjf", class:"w-24 h-24") %>
+    <%= cl_image_tag("movement_h7jzjf", class:"w-20 h-20") %>
   </div>
   <div class="justify-center mt-5">
-    <h1 class="font-headings text-lg">Which movement option can help you?</h1>
+    <h1 class="font-headings lg:text-lg">Which movement option can help you?</h1>
   </div>
 </div>
 
-<%# <div class="flex flex-wrap justify-center m-5 md:space-x-20"> %>
-<div class="grid lg:grid-cols-4 md:grid-cols-2 justify-center p-3 md:ml-10">
+<%# <div class="flex flex-wrap justify-center my-5 space-x-10"> %>
+<div class="grid lg:grid-cols-4 grid-cols-2 justify-center p-3 mx-3">
   <% @therapies.each do |therapy| %>
 
-      <div class="justify-center shadow-lg shadow-[#A2D5AB] w-64 h-96 px-3 py-28 mb-5">
-
+      <div class="justify-center shadow-lg shadow-lightgreen w-48 h-60 px-3 py-14 mb-5">
       <%= link_to video_path(therapy.content) do %>
         <% if therapy.sub_category == "yoga" %>
           <div class="flex justify-center">
-            <%= cl_image_tag("icon_yoga-01_1_jjptzi", class:"w-28 h-28") %>
+            <%= cl_image_tag("icon_yoga-01_1_jjptzi", class:"w-24 h-24") %>
           </div>
-            <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Yoga</h5>
+            <h5 class="font-headings text-xl text-lightgreen text-center mx-3 py-3">Yoga</h5>
         <% end %>
 
         <% if therapy.sub_category == "meditation" %>
           <div class="flex justify-center">
-            <%= cl_image_tag("meditation_azdo5p", class:"w-28 h-28") %>
+            <%= cl_image_tag("meditation_azdo5p", class:"w-24 h-24") %>
           </div>
-            <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Meditation</h5>
+            <h5 class="font-headings text-xl text-lightgreen text-center mx-3 py-3">Meditation</h5>
         <% end %>
 
         <% if therapy.sub_category == "breathwork" %>
           <div class="flex justify-center">
-            <%= cl_image_tag("breathwork_eapavr", class:"w-28 h-28") %>
+            <%= cl_image_tag("breathwork_eapavr", class:"w-24 h-24") %>
           </div>
-            <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Breathwork</h5>
+            <h5 class="font-headings text-xl text-lightgreen text-center mx-3 py-3">Breathwork</h5>
         <% end %>
       <% end %>
 
         <% if therapy.sub_category == "walk" %>
           <div class="flex justify-center">
           <%= link_to walk_path(therapy.content) do %>
-            <%= cl_image_tag("walking_c2qkol", class:"w-28 h-28") %>
+            <%= cl_image_tag("walking_c2qkol", class:"w-24 h-24") %>
           </div>
-            <h5 class="font-headings text-2xl text-lightgreen text-center mx-3 py-5">Walking</h5>
+            <h5 class="font-headings text-xl text-lightgreen text-center mx-3 py-3">Walking</h5>
           <% end %>
 
         <% end %>
