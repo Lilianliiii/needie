@@ -17,10 +17,8 @@
       <% end %>
     </div>
 
-    <div class="flex justify-center my-5">
-      <h1 class="font-headings italic">
-        <%= @audio.therapy.content.link %>
-      </h1>
+    <div class="flex justify-center m-2">
+      <iframe style="border-radius:12px" src=<%= @audio.therapy.content.link %> width="80%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     </div>
 
   </div>
