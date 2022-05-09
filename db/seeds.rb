@@ -89,37 +89,37 @@ affirmations_therapy.save
 puts " Affirmations Created"
 
 puts "Creating Good News "
-happy_news = Reading.create(text: " With his custom bowl, this 12-year-old raised $325,000 for Ukrainian kids")
+happy_news = Reading.create(text: "https://rss.app/embed/v1/wall/bXDU4bfD4PlEwL29")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = happy_news
 good_vibes_news_therapy.mood = happy
 good_vibes_news_therapy.save
 
-meh_news = Reading.create(text: "Scientists finish sequencing a complete human genome")
+meh_news = Reading.create(text: "https://rss.app/embed/v1/wall/bXDU4bfD4PlEwL29")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = meh_news
 good_vibes_news_therapy.mood = meh
 good_vibes_news_therapy.save
 
-annoyed_news = Reading.create(text: "In the Seychelles, conservation efforts are paying off for the endangered green turtle")
+annoyed_news = Reading.create(text: "https://rss.app/embed/v1/wall/VPU4CZ51kG3GBvwg")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = annoyed_news
 good_vibes_news_therapy.mood = annoyed
 good_vibes_news_therapy.save
 
-anx_news = Reading.create(text: "Dozens of Afghan refugees have found work at Sheraton Downtown Phoenix hotel")
+anx_news = Reading.create(text: "https://rss.app/embed/v1/wall/VPU4CZ51kG3GBvwg")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = anx_news
 good_vibes_news_therapy.mood = anxious
 good_vibes_news_therapy.save
 
-angry_news = Reading.create(text: " I allow myself to acknowledge angry feelings without losing control.")
+angry_news = Reading.create(text: "https://rss.app/embed/v1/wall/3tFr9kxUSjN1BH3D")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = angry_news
 good_vibes_news_therapy.mood = angry
 good_vibes_news_therapy.save
 
-sad_news = Reading.create(text: " I bring something wonderful to the table and that makes me happy.")
+sad_news = Reading.create(text: "https://rss.app/embed/v1/wall/3tFr9kxUSjN1BH3D")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = sad_news
 good_vibes_news_therapy.mood = sad
