@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 
 	<div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
-		<div class="container mx-auto px-4 py-2 md:py-24">
+		<div class="container mx-auto px-4 py-2 md:py-24 my-5">
 
 			<div class="bg-white rounded-lg">
 
@@ -55,7 +55,6 @@
 						<template x-for="(date, dateIndex) in no_of_days" :key="dateIndex">
 							<div style="width: 14.28%; height: 120px" class="lg:p-2 py-3 text-center lg:text-2xl text-white font-bold">
 								<div
-                <%# need to change @click to show user moods for that day %>
 									@click="showEventModal(date)"
 									x-text="date"
 									class="inline-flex lg:w-24 w-12 h-12 lg:h-24 items-center justify-center cursor-pointer text-center leading-none rounded-full bg-lightgreen"
@@ -82,17 +81,14 @@
 				</div>
 
         <div class="shadow w-full rounded-lg bg-white overflow-hidden w-full block p-8">
-          <h2 class="text-2xl mb-6 text-neediegreen font-headings border-b pb-2">Your moods for "this day"</h2>
+          <h2 class="text-2xl mb-6 text-neediegreen font-headings border-b pb-2" x-text="title"></h2>
             <div class="font-headings">
-            <% @user_moods.each do |user_mood| %>
-            <ul class="list-none my-2">
-              <li>
-                <%= cl_image_tag(user_mood.mood.image, class:"w-8 h-8 inline-block mx-2") %>
-                <%= user_mood.mood.name %> at
-                <%= user_mood.created_at.strftime("%k:%M%p") %>
-              </li>
+            <template x-for="mood in moodsList">
+            <ul class="list-none my-2 font-headings">
+              <img :src=`https://res.cloudinary.com/df8hxzoty/image/upload/v1651638236/${mood.image}.png` alt="mood image" class="w-12 h-12 inline-block">
+              <li x-text="mood.name" class="inline-block"></li>
+            </template>
             </ul>
-            <% end %>
             </div>
         </div>
 			</div>
@@ -111,6 +107,9 @@
 				no_of_days: [],
 				blankdays: [],
 				days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'],
+        moodsList: [],
+        title: "",
+        image: "",
 
 				openEventModal: false,
 
@@ -130,8 +129,19 @@
 
 				showEventModal(date) {
 					// open the modal
+          // console.log(date);
 					this.openEventModal = true;
-					this.event_date = new Date(this.year, this.month, date).toDateString();
+					this.event_date = new Date(this.year, this.month, date + 1).toISOString().slice(0,10);
+          this.title = `All the moods you felt on ${this.event_date}`
+          console.log(typeof this.event_date);
+          console.log(<%= @new_moods %>);
+          const moods = <%= @new_moods %>
+          this.moodsList = moods.filter(mood => {
+            console.log(typeof mood.start_time);
+            console.log(mood.start_time, this.event_date, mood.start_time === this.event_date);
+            return mood.start_time === this.event_date
+          });
+          // console.log(this.moodsList, this.days);
 				},
 
 				getNoOfDays() {
@@ -155,21 +165,3 @@
 			}
 		}
 	</script>
-
-
-
-
-<div class="flex justify-center my-3">
-  <div class="w-11/12 mx-5 border-t border-neediegreen pt-3 lg:px-20 font-headings">
-    <h1 class="font-headings text-neediegreen lg:text-2xl"> User Moods Calendar</h1>
-    <% @user_moods.reverse_each do |user_mood| %>
-    <ul class="list-none my-2">
-      <li>
-        <%= cl_image_tag(user_mood.mood.image, class:"w-8 h-8 inline-block mx-2") %>
-        <%= user_mood.mood.name %> at
-        <%= user_mood.created_at.strftime("%l:%M%p %A %d %b %Y") %>
-      </li>
-    </ul>
-    <% end %>
-  </div>
-</div>
