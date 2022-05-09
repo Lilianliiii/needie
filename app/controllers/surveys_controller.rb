@@ -35,6 +35,16 @@ class SurveysController < ApplicationController
     # end
   end
 
+  def update
+    @survey = Survey.find(params[:id])
+    @survey.user = current_user
+    @survey.save
+  end
+
+  def index
+    @surveys = current_user.surveys
+  end
+
   private
 
   def score
@@ -43,6 +53,6 @@ class SurveysController < ApplicationController
     # @score = @all_scores.sum
     answer = params[:survey]
     all_answers = answer.values.map!{ |a| a.to_i }
-    p all_answers.sum
+    all_answers.sum
   end
 end

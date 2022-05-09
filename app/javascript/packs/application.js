@@ -8,19 +8,29 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import "controllers"
+import "bootstrap"
+
+import "stylesheets/application"
+import { initMapbox } from '../plugins/init_mapbox';
+
+
+// require("@rails/ujs").start()
+require("turbolinks").start()
+require("@rails/activestorage").start()
+require("channels")
+
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import "controllers"
-import "bootstrap"
-
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-import "stylesheets/application"
-
 function updateQuestionZero(value){
   document.getElementById('question_0').innerText = value
 }
+
+console.log("test")
+document.addEventListener('turbolinks:load', () => {
+  console.log("load")
+  initMapbox();
+})

@@ -89,37 +89,37 @@ affirmations_therapy.save
 puts " Affirmations Created"
 
 puts "Creating Good News "
-happy_news = Reading.create(text: " With his custom bowl, this 12-year-old raised $325,000 for Ukrainian kids")
+happy_news = Reading.create(text: "https://rss.app/embed/v1/wall/bXDU4bfD4PlEwL29")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = happy_news
 good_vibes_news_therapy.mood = happy
 good_vibes_news_therapy.save
 
-meh_news = Reading.create(text: "Scientists finish sequencing a complete human genome")
+meh_news = Reading.create(text: "https://rss.app/embed/v1/wall/bXDU4bfD4PlEwL29")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = meh_news
 good_vibes_news_therapy.mood = meh
 good_vibes_news_therapy.save
 
-annoyed_news = Reading.create(text: "In the Seychelles, conservation efforts are paying off for the endangered green turtle")
+annoyed_news = Reading.create(text: "https://rss.app/embed/v1/wall/VPU4CZ51kG3GBvwg")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = annoyed_news
 good_vibes_news_therapy.mood = annoyed
 good_vibes_news_therapy.save
 
-anx_news = Reading.create(text: "Dozens of Afghan refugees have found work at Sheraton Downtown Phoenix hotel")
+anx_news = Reading.create(text: "https://rss.app/embed/v1/wall/VPU4CZ51kG3GBvwg")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = anx_news
 good_vibes_news_therapy.mood = anxious
 good_vibes_news_therapy.save
 
-angry_news = Reading.create(text: " I allow myself to acknowledge angry feelings without losing control.")
+angry_news = Reading.create(text: "https://rss.app/embed/v1/wall/3tFr9kxUSjN1BH3D")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = angry_news
 good_vibes_news_therapy.mood = angry
 good_vibes_news_therapy.save
 
-sad_news = Reading.create(text: " I bring something wonderful to the table and that makes me happy.")
+sad_news = Reading.create(text: "https://rss.app/embed/v1/wall/3tFr9kxUSjN1BH3D")
 good_vibes_news_therapy = Therapy.new(category: 'good vibes', sub_category: 'good news')
 good_vibes_news_therapy.content = sad_news
 good_vibes_news_therapy.mood = sad
@@ -364,38 +364,38 @@ movement_meditation_therapy.save
 puts "Meditation Videos Created"
 
 
-puts "Creating Walks Videos..."
-happy_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+puts "Creating Walks Routes..."
+happy_walk = Walk.create(name: "Empire State Building", address: "20 W 34th St, New York, NY 10001, United States")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = happy_walk
 movement_walk_therapy.mood = happy
 movement_walk_therapy.save
 
-meh_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+meh_walk = Walk.create(name: "Statue of Liberty", address: "Liberty Island, New York City, New York 07305, United States")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = meh_walk
 movement_walk_therapy.mood = meh
 movement_walk_therapy.save
 
-annoyed_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+annoyed_walk = Walk.create(name: "Central Park", address: "E. 90th St, New York City, New York 10128, United States")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = annoyed_walk
 movement_walk_therapy.mood = annoyed
 movement_walk_therapy.save
 
-anxious_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+anxious_walk = Walk.create(name: "Walk 5 KM", address: "123-456-789")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = anxious_walk
 movement_walk_therapy.mood = anxious
 movement_walk_therapy.save
 
-angry_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+angry_walk = Walk.create(name: "Walk 5 KM", address: "123-456-789")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = angry_walk
 movement_walk_therapy.mood = angry
 movement_walk_therapy.save
 
-sad_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+sad_walk = Walk.create(name: "Walk 5 KM", address: "123-456-789")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = sad_walk
 movement_walk_therapy.mood = sad

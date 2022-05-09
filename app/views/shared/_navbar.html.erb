@@ -18,7 +18,7 @@
   <div class="dropstart relative">
     <a class="dropdown-toggle flex items-center hidden-arrow" href="#" id="dropdownMenuButton" role="button"
       data-bs-toggle="dropdown" aria-expanded="false">
-      <%= cl_image_tag current_user.avatar.key, class:"rounded-full h-10 w-10" %>
+      <%= cl_image_tag current_user.avatar.key, class:"rounded-full h-14 w-14" %>
     </a>
     <ul class="
     dropdown-menu
@@ -107,11 +107,67 @@
   </div>
   </div>
   <% else %>
-  <div class="sm:flex items-center justify-between space-x-2">
+  <div class=" hidden sm:flex items-center justify-between space-x-2">
     <%= link_to "Login", new_user_session_path, class:"text-sm px-4 py-2 leading-none border-1 rounded-3xl text-white border-white mt-4 md:mt-1" %>
     <%= link_to "Sign Up", new_user_registration_path, class:"text-sm px-4 py-2 leading-none border-1 rounded-3xl text-white border-white mt-4 md:mt-1" %>
   </div>
-  <% end %>
+  <div class="sm:hidden dropstart relative">
+    <a class="dropdown-toggle flex items-center hidden-arrow" href="#" id="dropdownMenuButton" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-bars text-white text-2xl"></i>
+    </a>
+    <ul class="
+    dropdown-menu
+    min-w-max
+    absolute
+    hidden
+    bg-white
+    text-base
+    z-50
+    float-left
+    py-2
+    list-none
+    text-left
+    rounded-lg
+    shadow-lg
+    mt-1
+    hidden
+    m-0
+    bg-clip-padding
+    border-none
+    left-auto
+    right-0
+  " aria-labelledby="dropdownMenuButton">
+      <li>
+        <%= link_to "Login", new_user_session_path, class:"
+        dropdown-item
+        text-sm
+        py-2
+        px-4
+        font-normal
+        block
+        w-full
+        whitespace-nowrap
+        font-headings
+        text-neediegreen
+        hover:bg-gray-100
+        hover:text-neediegreen" %>
+      </li>
+        <%= link_to "Sign Up", new_user_registration_path, class:"
+        dropdown-item
+        text-sm
+        py-2
+        px-4
+        font-normal
+        block
+        w-full
+        whitespace-nowrap
+        font-headings
+        text-neediegreen
+        hover:bg-gray-100
+        hover:text-neediegreen" %>
+      </li>
+    </ul>
   </div>
-
+  <% end %>
+</div>
 </nav>
