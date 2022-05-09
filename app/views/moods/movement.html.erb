@@ -8,10 +8,10 @@
 </div>
 
 <%# <div class="flex flex-wrap justify-center my-5 space-x-10"> %>
-<div class="grid lg:grid-cols-4 grid-cols-2 justify-center p-3 mx-3">
+<div class="grid lg:grid-cols-4 grid-cols-2 m-3 place-items-center">
   <% @therapies.each do |therapy| %>
 
-      <div class="justify-center shadow-lg shadow-lightgreen w-48 h-60 px-3 py-14 mb-5">
+      <div class="justify-center shadow-lg shadow-lightgreen w-40 h-60 px-3 py-14 mb-5">
       <%= link_to video_path(therapy.content) do %>
         <% if therapy.sub_category == "yoga" %>
           <div class="flex justify-center">

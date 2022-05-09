@@ -1,14 +1,14 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 
 	<div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
-		<div class="container mx-auto px-4 py-2 md:py-24 my-5">
+		<div class="container mx-auto px-4 py-2 md:py-24 my-3">
 
 			<div class="bg-white rounded-lg">
 
 				<div class="flex items-center justify-center py-3 px-6 text-center">
 					<div>
 						<span x-text="MONTH_NAMES[month]" class="text-4xl font-bold text-lightgreen uppercase italic"></span>
-						<%# <span x-text="year" class="ml-1 text-lg text-gray-600 font-normal"></span> %>
+						<%# <span x-text="year" class="ml-1 text-lg text-neediegreen italic py-3"></span> %>
 					</div>
 					<div class="rounded-lg px-1" style="padding-top: 2px;">
 						<button
@@ -57,7 +57,7 @@
 								<div
 									@click="showEventModal(date)"
 									x-text="date"
-									class="inline-flex lg:w-24 w-12 h-12 lg:h-24 items-center justify-center cursor-pointer text-center leading-none rounded-full bg-lightgreen"
+									class="inline-flex lg:w-24 w-10 h-10 lg:h-24 items-center justify-center cursor-pointer text-center leading-none rounded-full bg-lightgreen"
 									:class="{'text-white bg-neediegreen': isToday(date) == true, 'text-white': isToday(date) == false }"
 								>
                 </div>
@@ -70,8 +70,8 @@
 		</div>
 
 		<!-- Modal -->
-    <div style=" background-color: rgba(0, 0, 0, 0.8)" class="fixed z-40 top-0 right-0 left-0 bottom-0 h-full w-full" x-show.transition.opacity="openEventModal">
-			<div class="p-4 max-w-xl mx-auto relative absolute left-0 right-0 overflow-hidden mt-24">
+    <div style=" background-color: rgba(0, 0, 0, 0.8)" class="fixed z-40 top-0 right-0 left-0 bottom-0 h-full w-full overflow-y-auto" x-show.transition.opacity="openEventModal">
+			<div class="p-4 max-w-xl mx-auto relative absolute left-0 right-0 mt-24">
 				<div class="shadow absolute right-0 top-0 w-10 h-10 rounded-full bg-white text-gray-500 hover:text-gray-800 inline-flex items-center justify-center cursor-pointer"
 					x-on:click="openEventModal = !openEventModal">
 					<svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
