@@ -41,6 +41,10 @@ class SurveysController < ApplicationController
     @survey.save
   end
 
+  def index
+    @surveys = current_user.surveys
+  end
+
   private
 
   def score
