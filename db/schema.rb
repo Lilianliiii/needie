@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_06_053144) do
+ActiveRecord::Schema.define(version: 2022_05_09_045009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,7 +69,8 @@ ActiveRecord::Schema.define(version: 2022_05_06_053144) do
   end
 
   create_table "surveys", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
+    t.integer "score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "question_0"
@@ -144,9 +145,11 @@ ActiveRecord::Schema.define(version: 2022_05_06_053144) do
 
   create_table "walks", force: :cascade do |t|
     t.string "name"
-    t.string "coordinates"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

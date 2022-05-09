@@ -1,0 +1,5 @@
+<h1>Your Past Burns Score</h1>
+<% @surveys.each do |survey| %>
+  <%= survey.score %>
+  <%= survey.created_at.strftime("%A, %d %b %Y") %>
+<% end %>
