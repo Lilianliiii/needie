@@ -168,37 +168,37 @@ puts "Jokes Created"
 
 puts "Creating Songs..."
 
-happy_song = Audio.create(link: "link to a happy song")
+happy_song = Audio.create(link: "https://open.spotify.com/embed/playlist/0IAG5sPikOCo5nvyKJjCYo?utm_source=generator")
 audio_music_therapy = Therapy.new(category: 'audio', sub_category: 'music')
 audio_music_therapy.content = happy_song
 audio_music_therapy.mood = happy
 audio_music_therapy.save
 
-meh_song = Audio.create(link: "link to a meh song")
+meh_song = Audio.create(link: "https://open.spotify.com/embed/playlist/7aBzdEWPMYFfnDhuv2IS93?utm_source=generator")
 audio_music_therapy = Therapy.new(category: 'audio', sub_category: 'music')
 audio_music_therapy.content = meh_song
 audio_music_therapy.mood = meh
 audio_music_therapy.save
 
-annoyed_song = Audio.create(link: "link to a annoyed song")
+annoyed_song = Audio.create(link: "https://open.spotify.com/embed/playlist/6ttrcKJ2DluCiXKKKZuFmU?utm_source=generator")
 audio_music_therapy = Therapy.new(category: 'audio', sub_category: 'music')
 audio_music_therapy.content = annoyed_song
 audio_music_therapy.mood = annoyed
 audio_music_therapy.save
 
-anx_song = Audio.create(link: "link to a anxious song")
+anx_song = Audio.create(link: "https://open.spotify.com/embed/playlist/4nQE6AY2YwnymjbGzH0wMs?utm_source=generator&theme=0")
 audio_music_therapy = Therapy.new(category: 'audio', sub_category: 'music')
 audio_music_therapy.content = anx_song
 audio_music_therapy.mood = anxious
 audio_music_therapy.save
 
-angry_song = Audio.create(link: "link to an angry song")
+angry_song = Audio.create(link: "https://open.spotify.com/embed/playlist/5O12S9z3O8dEhHWt3bPbxm?utm_source=generator")
 audio_music_therapy = Therapy.new(category: 'audio', sub_category: 'music')
 audio_music_therapy.content = angry_song
 audio_music_therapy.mood = angry
 audio_music_therapy.save
 
-sad_song = Audio.create(link: "link to a sad song")
+sad_song = Audio.create(link: "https://open.spotify.com/embed/playlist/1JgGmeuJgMKVSYw39rG7y6?utm_source=generator")
 audio_music_therapy = Therapy.new(category: 'audio', sub_category: 'music')
 audio_music_therapy.content = sad_song
 audio_music_therapy.mood = sad
@@ -208,37 +208,37 @@ puts "Songs Created"
 
 puts "Creating Podcasts..."
 
-happy_podcast = Audio.create(link: "link to a happy podcast")
+happy_podcast = Audio.create(link: "https://open.spotify.com/embed/show/7F6YqGJ06UEuD7qG81tFHw?utm_source=generator")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = happy_podcast
 audio_podcast_therapy.mood = happy
 audio_podcast_therapy.save
 
-meh_podcast = Audio.create(link: "link to a meh podcast")
+meh_podcast = Audio.create(link: "https://open.spotify.com/embed/show/3i5TCKhc6GY42pOWkpWveG?utm_source=generator")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = meh_podcast
 audio_podcast_therapy.mood = meh
 audio_podcast_therapy.save
 
-annoyed_podcast = Audio.create(link: "link to a annoyed podcast")
+annoyed_podcast = Audio.create(link: "https://open.spotify.com/embed/show/0eFL5HJejQHZrdgAFdPnOm?utm_source=generator")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = annoyed_podcast
 audio_podcast_therapy.mood = annoyed
 audio_podcast_therapy.save
 
-anx_podcast = Audio.create(link: "link to a anxious podcast")
+anx_podcast = Audio.create(link: "https://open.spotify.com/embed/show/2M81RFGI2Smj7rXb2CrEOi?utm_source=generator")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = anx_podcast
 audio_podcast_therapy.mood = anxious
 audio_podcast_therapy.save
 
-angry_podcast = Audio.create(link: "link to an angry podcast")
+angry_podcast = Audio.create(link: "https://open.spotify.com/embed/show/6xX50DuLfERTuYqXmvkV9g?utm_source=generator")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = angry_podcast
 audio_podcast_therapy.mood = angry
 audio_podcast_therapy.save
 
-sad_podcast = Audio.create(link: "link to a sad podcast")
+sad_podcast = Audio.create(link: "https://open.spotify.com/embed/show/4MZrQOVRxXjUDlLjT5UQvr?utm_source=generator")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = sad_podcast
 audio_podcast_therapy.mood = sad
