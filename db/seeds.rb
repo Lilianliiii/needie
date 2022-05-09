@@ -364,38 +364,38 @@ movement_meditation_therapy.save
 puts "Meditation Videos Created"
 
 
-puts "Creating Walks Videos..."
-happy_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+puts "Creating Walks Routes..."
+happy_walk = Walk.create(name: "Empire State Building", address: "20 W 34th St, New York, NY 10001, United States")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = happy_walk
 movement_walk_therapy.mood = happy
 movement_walk_therapy.save
 
-meh_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+meh_walk = Walk.create(name: "Statue of Liberty", address: "Liberty Island, New York City, New York 07305, United States")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = meh_walk
 movement_walk_therapy.mood = meh
 movement_walk_therapy.save
 
-annoyed_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+annoyed_walk = Walk.create(name: "Central Park", address: "E. 90th St, New York City, New York 10128, United States")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = annoyed_walk
 movement_walk_therapy.mood = annoyed
 movement_walk_therapy.save
 
-anxious_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+anxious_walk = Walk.create(name: "Walk 5 KM", address: "123-456-789")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = anxious_walk
 movement_walk_therapy.mood = anxious
 movement_walk_therapy.save
 
-angry_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+angry_walk = Walk.create(name: "Walk 5 KM", address: "123-456-789")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = angry_walk
 movement_walk_therapy.mood = angry
 movement_walk_therapy.save
 
-sad_walk = Walk.create(name: "Walk 5 KM", coordinates: "123-456-789")
+sad_walk = Walk.create(name: "Walk 5 KM", address: "123-456-789")
 movement_walk_therapy = Therapy.new(category: 'movement', sub_category: 'walk')
 movement_walk_therapy.content = sad_walk
 movement_walk_therapy.mood = sad
