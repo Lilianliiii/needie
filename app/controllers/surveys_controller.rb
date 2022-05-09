@@ -35,6 +35,12 @@ class SurveysController < ApplicationController
     # end
   end
 
+  def update
+    @survey = Survey.find(params[:id])
+    @survey.user = current_user
+    @survey.save
+  end
+
   private
 
   def score
