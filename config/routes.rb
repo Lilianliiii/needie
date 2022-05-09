@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "users/registrations" }
   root to: 'moods#index'
   get 'profile', to: 'pages#profile', as: :profile
 
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resources :walks, only: [:show]
   resources :user_moods, only: [:index]
 
-  resources :surveys, only: [ :new, :create, :show ]
+  resources :surveys, only: [ :new, :create, :show, :update]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

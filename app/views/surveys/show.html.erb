@@ -5,6 +5,16 @@
     </div>
 
     <div>
+      <% if user_signed_in?%>
+        <%= link_to "save score", survey_path(@survey), method: :patch %>
+        <!-- pop-up alert here "score saved" -->
+      <% else %>
+        <%= link_to "sign up to save score", new_user_registration_path(survey_id: @survey.id) %>
+        <%= link_to "log in to save score", new_user_session_path %>
+      <% end %>
+    </div>
+
+    <div>
       <% if @survey.score  >= 0 && @survey.score <= 5 %>
         <%= render 'no_depression' %>
       <% elsif @survey.score > 5 && @survey.score <= 10 %>
