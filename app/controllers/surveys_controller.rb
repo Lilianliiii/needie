@@ -49,6 +49,6 @@ class SurveysController < ApplicationController
     # @score = @all_scores.sum
     answer = params[:survey]
     all_answers = answer.values.map!{ |a| a.to_i }
-    p all_answers.sum
+    all_answers.sum
   end
 end
