@@ -1,3 +1,5 @@
-<% if notice %>
-  <h1>This is a flash</h1>
-<% end %>
+<%# <% if notice %>
+  <%# <h1>This is a flash</h1> %>
+<%# <% end %>
+
+<%= flash.now[:notice]  %>
