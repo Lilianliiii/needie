@@ -7,15 +7,15 @@
       <ul>
       <li><strong><%= survey.score %></strong>
           <% if survey.score  >= 0 && survey.score <= 5 %>
-          <%= 'No depression' %>
+          <%= 'no depression' %>
           <% elsif survey.score > 5 && survey.score <= 10 %>
-          <%= 'Normal but unhappy' %>
+          <%= 'normal but unhappy' %>
           <% elsif survey.score > 10 && survey.score <= 25 %>
-          <%= 'Mild depression' %>
+          <%= 'mild depression' %>
           <% elsif survey.score > 25 && survey.score <= 50 %>
-          <%= 'Severe depression' %>
+          <%= 'severe depression' %>
           <% elsif survey.score > 50 && survey.score <= 100 %>
-          <%= 'Extreme depression' %>
+          <%= 'extreme depression' %>
           <% end %>on
           <%= survey.created_at.strftime("%A, %d %b %Y") %>
       </li>
