@@ -6,12 +6,15 @@
         <%= cl_image_tag("joke_lcmg27", class:"w-16 h-16") %>
         <div class="m-2">
           <h1 class="font-headings font-bold lg:text-lg">So you're feeling <%= (@animation.therapy.mood.name).downcase %> and you want to have a laugh?</h1>
-          <h1 class="font-headings lg:text-lg">Check out this joke!</h1>
+          <br>
+          <h1 class="font-headings lg:text-lg">Check out this meme!</h1>
+          <br>
+          <button onClick="window.location.reload();">Get another one!</button>
         </div>
       </div>
     <% end %>
       <div class="flex justify-center py-3 px-5 font-headings text-neediegreen">
-        <%= @animation.link %>
+        <img class="w-1/2" src="<%= @meme %>">
       </div>
   </div>
 </div>
