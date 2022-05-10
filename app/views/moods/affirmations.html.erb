@@ -1,5 +1,5 @@
  <div class="flex justify-center">
-  <div class="lg:w-5/6 lg:m-5 shadow rounded-3xl p-3">
+  <div class="lg:w-5/6 lg:m-5 p-3">
     <div class="flex justify-center p-3">
       <%= cl_image_tag("affirmations_or7j1g", class:"w-14 h-14") %>
       <div class="m-2">
@@ -7,10 +7,21 @@
         <h1 class="font-headings lg:text-lg">Repeat the following:</h1>
       </div>
     </div>
-    <div class="flex justify-center py-3 px-5 font-headings text-neediegreen">
-      <%# <% @therapies.each do |therapy| %>
+
+    <h1 class="py-3 px-5 font-headings text-neediegreen lg:text-center text-left">
       <%= @therapies.first.content.affirmations.sample(1)[0][12..-3] %>
-      <%# <% end %>
-    </div>
+    </h1>
+    <h1 class="py-3 px-5 font-headings text-neediegreen lg:text-center text-left">
+      <%= @therapies.first.content.affirmations.sample(1)[0][12..-3] %>
+    </h1>
+    <h1 class="py-3 px-5 font-headings text-neediegreen lg:text-center text-left">
+      <%= @therapies.first.content.affirmations.sample(1)[0][12..-3] %>
+    </h1>
+    <h1 class="py-3 px-5 font-headings text-neediegreen lg:text-center text-left">
+      <%= @therapies.first.content.affirmations.sample(1)[0][12..-3] %>
+    </h1>
+    <h1 class="py-3 px-5 font-headings text-neediegreen lg:text-center text-left">
+      <%= @therapies.first.content.affirmations.sample(1)[0][12..-3] %>
+    </h1>
   </div>
 </div>
