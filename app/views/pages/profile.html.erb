@@ -1,105 +1,44 @@
-<%# <%= cl_image_tag current_user.avatar.key, height: 30, width: 40, crop: :fill %>
-<%# <div class="flex">
-  <div class="py-5">
+<div class="m-3">
+  <div class="flex justify-center p-3">
+    <%= cl_image_tag current_user.avatar.key, class:"w-40 h-40 rounded-full ring ring-neediegreen ring-offset-base-100 ring-offset-2" %>
+  </div>
+
+  <div class="">
     <h1 class="text-4xl font-headings text-center text-gray-800">
-      Hello <%= current_user.first_name %>
-    <%# </h1>
-    <h2 class="text-md text-center font-headings text-gray-400">
-      How are you feeling today?
-    </h2> %>
-    <%# <%= link_to "Check your mood history here!", user_moods_path, class:"font-headings" %>
-  <%# </div>
-</div> %>
+        Hello <%= current_user.first_name %>
+    </h1>
+    <h2 class="text-md text-center p-3 font-headings text-neediegreen">
+        Welcome to your Needie profile
+    </h2>
+  </div>
 
-<%# <article class="p-11 w-8/12 bg-white-800 m-24 border border-green-700 rounded-xl">
-  <div class="flex items-center pl-72 ">
-    <%= cl_image_tag current_user.avatar.key, height: 30, width: 40 %>
+  <div class="flex justify-center p-2 mb-2">
+    <%= link_to "View your past moods here", user_moods_path, class: "py-2 px-5 border rounded-3xl text-white bg-neediegreen lg:text-lg text-center" %>
+  </div>
 
-    <%# <div class="ml-3">
-      <h5 class="text-lg font-medium text-black"> Hello <%= current_user.first_name</h5>
-      <div class="flow-root">
-        <ul class="flex flex-wrap -m-1">
-          <li class="p-1 leading-none">
-            <a
-              href="https://twitter.com/itsmarkmead"
-              target="_blank"
-              class="text-xs font-medium text-gray-300"
-            >
-              Twitter %>
-            <%# </a> %>
-          <%# </li> %>
-
-          <%# <li class="p-1 leading-none">
-            <a
-              href="https://github.com/markmead"
-              target="_blank"
-              class="text-xs font-medium text-gray-300"
-            >
-              WeChat
-            </a>
-          </li> %>
-
-          <%# <li class="p-1 leading-none">
-            <a
-              href="https://markmead.dev/"
-              target="_blank"
-              class="text-xs font-medium text-gray-300"
-              >Weibo</a
-            >
+  <div class="py-1">
+    <h2 class="text-lg text-center font-headings text-neediegreen">
+      Your Past <strong>Burns</strong> Checklist Scores:
+    </h2>
+    <div class="text-md text-center">
+      <% @surveys.each do |survey| %>
+        <ul>
+          <li> - You scored <strong><%= survey.score %></strong> which is an indicator of
+          <% if survey.score  >= 0 && survey.score <= 5 %>
+            <strong><%= 'no depression' %></strong>
+          <% elsif survey.score > 5 && survey.score <= 10 %>
+            <strong><%= 'normal but unhappy' %></strong>
+          <% elsif survey.score > 10 && survey.score <= 25 %>
+            <strong><%= 'mild depression' %></strong>
+          <% elsif survey.score > 25 && survey.score <= 50 %>
+            <strong><%= 'severe depression' %></strong>
+          <% elsif survey.score > 50 && survey.score <= 100 %>
+            <strong><%= 'extreme depression' %></strong>
+          <% end %> on
+            <%= survey.created_at.strftime("%A, %d %b %Y") %>
           </li>
         </ul>
-      </div>
+      <% end %>
     </div>
-  </div> %>
-
-  <%# <ul class="mt-8 space-y-8">
-    <li>
-        <h5 class="font-medium text-black"><%= link_to "Mood Calendar", user_moods_path, class:"font-headings"</h5>
-
-        <%# <p class="mt-1 text-xs font-medium text-gray-300"> Check and fill in your past moods here
-        </p>
-      </a>
-    </li> %>
-
-    <%# <li>
-        <h5 class="font-medium text-black"><%= link_to " Past scores", surveys_path, class:"font-headings" %>
-
-        <%# <p class="mt-1 text-xs font-medium text-gray-300">
-        Check your previous Burns score here!
-        </p>
-      </a>
-    </li>
-  </ul>
-
-  <div class="flex justify-center p-3">
-    <%= cl_image_tag current_user.avatar.key, class:"w-40 h-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2" %>
-
-<div class="flex justify-center p-3">
-  <%= cl_image_tag current_user.avatar.key, class:"w-40 h-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2" %>
-</div>
-
-<div class="py-3">
-    <h1 class="text-4xl font-headings text-center text-gray-800">
-      Hello <%= current_user.first_name %>
-    </h1>
-    <h2 class="text-md text-center p-3 font-headings text-gray-400">
-      Welcome to your Needie profile
-    </h2>
-</div>
-<div class="flex justify-center p-2 mb-5">
-<%= link_to "View your past moods here", user_moods_path, class: "py-2 px-5 border rounded-3xl text-white bg-neediegreen lg:text-lg text-center" %>
-</div>
-</div>
-
-<div class="py-1">
-    <h2 class="text-md text-center font-headings text-gray-400">
-      Take a look at your past surveys scores here:
-    </h2>
-
-    <ul class="flex p-3 justify-center list-disc  list-inside dark:text-gray-400">
-      <li>You scored 50 on 5/8 which is an indicator of severe depression</li>
-    </ul>
-    <ul class="flex p-3 justify-center list-disc  list-inside dark:text-gray-400">
-      <li>You scored 40 on 5/10 which is an indicator of mild depression</li>
-    </ul>
+  </div>
 </div>
