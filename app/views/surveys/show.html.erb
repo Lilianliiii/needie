@@ -4,13 +4,17 @@
       <h1 class="text-center font-headings lg:text-2xl text-neediegreen">You scored: <strong><%= @survey.score %></strong></h1>
     </div>
 
-    <div>
+    <div class="flex justify-center my-3">
       <% if user_signed_in?%>
-        <%= link_to "save score", survey_path(@survey), method: :patch %>
+
+      <button data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <%= link_to "Save Score", survey_path(@survey), method: :patch, class: "font-headings py-2 px-5 border rounded-full text-white bg-neediegreen w-48" %>
+      </button>
+
         <!-- pop-up alert here "score saved" -->
       <% else %>
-        <%= link_to "sign up to save score", new_user_registration_path(survey: @survey.id) %>
-        <%= link_to "log in to save score", new_user_session_path(survey: @survey.id) %>
+        <%= link_to "Sign up to save score", new_user_registration_path(survey: @survey.id), class: "font-headings py-2 px-5 border rounded-full text-white bg-neediegreen w-54 mx-2" %>
+        <%= link_to "Log in to save score", new_user_session_path(survey: @survey.id), class: "font-headings py-2 px-5 border rounded-full text-white bg-neediegreen w-54 mx-2" %>
       <% end %>
     </div>
 
@@ -26,6 +30,26 @@
       <% elsif @survey.score > 50 && @survey.score <= 100 %>
         <%= render 'extreme_depression' %>
       <%end%>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog relative w-auto pointer-events-none">
+    <div
+      class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+      <div
+        class="modal-header flex flex-shrink-0 items-center justify-between p-4">
+        <h5 class="text-xl font-headings leading-normal text-neediegreen" id="exampleModalLabel">Your score has been saved to your profile!</h5>
+        <button type="button"
+          class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body relative p-4 font-headings">
+        Visit your profile anytime to see all past scores
+      </div>
     </div>
   </div>
 </div>

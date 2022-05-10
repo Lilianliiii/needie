@@ -8,9 +8,9 @@
       </div>
     </div>
     <div class="flex justify-center py-3 px-5 font-headings text-neediegreen">
-      <% @therapies.each do |therapy| %>
-      <%= therapy.content.text %>
-      <% end %>
+      <%# <% @therapies.each do |therapy| %>
+      <%= @therapies.first.content.affirmations.sample(1)[0][12..-3] %>
+      <%# <% end %>
     </div>
   </div>
 </div>
