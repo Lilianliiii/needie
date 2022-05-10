@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def profile
     current_user
+    @surveys = current_user.surveys
   end
 
   def contact

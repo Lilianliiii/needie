@@ -4,7 +4,7 @@
     <br>
     <h1 class="font-headings text-center lg:text-xl">This is a self assessment to rate your own symptoms for indicators of depression.</h1>
     <br>
-    <h2 class="font-headings text-center trailing-wide lg:text-l text-l italic"><strong>Instructions: </strong>Slide left and right to indicate how much you have
+    <h2 class="font-headings text-center trailing-wide lg:text-lg italic"><strong>Instructions: </strong>Slide left and right to indicate how much you have
       experienced each symptom during the past week according to the table below, including today. Please answer all 25 items.</h2>
     <br>
     <div class="flex justify-center border-neediegreen border-1 rounded-3xl lg:m-3 m-2">
@@ -81,11 +81,9 @@
           <%= f.input :question_9, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", value: "0", list:"question_9", onInput:"updateQuestionNine(this.value)", class: "w-80" }  %>
           <span id="question_9" class="px-24 font-headings text-neediegreen text-2xl font-bold">0</span>
         </div>
-
       <br>
-      <h1 class="font-headings text-neediegreen mb-3 font-semibold text-xl text-center trailing-wide">Activities and Personal Relationships<h1>
+      <h1 class="font-headings text-neediegreen mb-3 font-semibold lg:text-xl text-center trailing-wide">Activities and Personal Relationships<h1>
       <br>
-
       <h2 class="font-headings mb-3 text-xl trailing-wide ml-8">11. Loss of interest in family, friends or colleagues</h2>
         <div class="flex ml-8">
           <%= f.input :question_10, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", value: "0", list:"question_10", onInput:"updateQuestionTen(this.value)", class: "w-80" }  %>
@@ -127,9 +125,8 @@
           <%= f.input :question_16, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", value: "0", list:"question_16", onInput:"updateQuestionSixteen(this.value)", class: "w-80" }  %>
           <span id="question_16" class="px-24 font-headings text-neediegreen text-2xl font-bold">0</span>
         </div>
-
       <br>
-      <h1 class="font-headings text-neediegreen mb-3 font-semibold text-xl text-center trailing-wide">Physical Symptoms</h1>
+      <h1 class="font-headings text-neediegreen mb-3 font-semibold lg:text-xl text-center trailing-wide">Physical Symptoms</h1>
       <br>
 
       <h2 class="font-headings mb-3 text-xl trailing-wide ml-8">18. Feeling tired</h2>
@@ -163,7 +160,7 @@
         </div>
 
       <br>
-      <h1 class="font-headings text-neediegreen mb-3 font-semibold text-xl text-center trailing-wide">Suicidal Urge</h1>
+      <h1 class="font-headings text-neediegreen mb-3 font-semibold lg:text-xl text-center trailing-wide">Suicidal Urge</h1>
       <br>
 
       <h2 class="font-headings mb-3 text-xl trailing-wide ml-8">23. Do you have any suicidal thoughts?</h2>

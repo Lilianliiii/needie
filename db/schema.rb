@@ -70,7 +70,8 @@ ActiveRecord::Schema.define(version: 2022_05_10_074435) do
   end
 
   create_table "surveys", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
+    t.integer "score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "question_0"
