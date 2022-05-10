@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "users/registrations", sessions: "users/sessions" }
   root to: 'moods#index'
   get 'profile', to: 'pages#profile', as: :profile
+  get 'contact', to: 'pages#contact', as: :contact
 
 
   resources :moods, only: [:index, :show] do
