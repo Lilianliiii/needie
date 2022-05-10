@@ -4,4 +4,7 @@ class PagesController < ApplicationController
   def profile
     current_user
   end
+
+  def contact
+  end
 end
