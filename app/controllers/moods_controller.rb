@@ -11,20 +11,16 @@ class MoodsController < ApplicationController
     if user_signed_in?
       @user_mood = UserMood.create(user: current_user, mood: @mood)
       flash.now[:notice] = "Your Mood has been logged"
-      #srender a flash/alert
     end
 
   end
 
   def audio
     # @mood = Mood.find(params[:id])
-
-    flash[:message] = "Your Account was Created Successfully!"
     @therapies = @mood.therapies.where(category: "audio")
   end
 
   def movement
-    flash[:message] = "Your Account was Created Successfully!"
     @therapies = @mood.therapies.where(category: "movement")
   end
 

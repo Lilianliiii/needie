@@ -4,13 +4,14 @@
       <h1 class="text-center font-headings lg:text-2xl text-neediegreen">You scored: <strong><%= @survey.score %></strong></h1>
     </div>
 
-    <div>
+    <div class="flex justify-center my-3">
       <% if user_signed_in?%>
-        <%= link_to "save score", survey_path(@survey), method: :patch %>
+        <%= link_to "Save Score", survey_path(@survey), method: :patch, class: "font-headings py-2 px-5 border rounded-full text-white bg-neediegreen w-48" %>
+
         <!-- pop-up alert here "score saved" -->
       <% else %>
-        <%= link_to "sign up to save score", new_user_registration_path(survey: @survey.id) %>
-        <%= link_to "log in to save score", new_user_session_path(survey: @survey.id) %>
+        <%= link_to "Sign up to save score", new_user_registration_path(survey: @survey.id), class: "font-headings py-2 px-5 border rounded-full text-white bg-neediegreen w-54 mx-2" %>
+        <%= link_to "Log in to save score", new_user_session_path(survey: @survey.id), class: "font-headings py-2 px-5 border rounded-full text-white bg-neediegreen w-54 mx-2" %>
       <% end %>
     </div>
 
