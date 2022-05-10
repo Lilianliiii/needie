@@ -1,5 +1,13 @@
-<h1>Your Past Burns Score</h1>
-<% @surveys.each do |survey| %>
-  <%= survey.score %>
-  <%= survey.created_at.strftime("%A, %d %b %Y") %>
-<% end %>
+<div class="flex justify-center content-center">
+  <div class="lg:w-1/2 lg:m-5 shadow rounded-3xl p-5">
+    <h1 class="font-headings text-center text-2xl text-neediegreen">Your Past <strong>Burns</strong> Checklist Scores</h1>
+    <br>
+    <div class="text-xl trailing-wide text-center leading-8">
+    <% @surveys.each do |survey| %>
+      <ul>
+      <li> <%= survey.score %> <%= survey.created_at.strftime("%A, %d %b %Y") %> </li>
+      </ul>
+    <% end %>
+    </div>
+  </div>
+</div>
