@@ -6,6 +6,7 @@
 
     <div class="flex justify-center my-3">
       <% if user_signed_in?%>
+
       <button data-bs-toggle="modal" data-bs-target="#exampleModal">
         <%= link_to "Save Score", survey_path(@survey), method: :patch, class: "font-headings py-2 px-5 border rounded-full text-white bg-neediegreen w-48" %>
       </button>

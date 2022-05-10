@@ -49,39 +49,49 @@ puts "Created Moods!"
 # movement_walk_therapy = Therapy.new(category: 'Movement', sub_category: 'Walk')
 # puts "Therapies Created"
 
+require 'open-uri'
+require 'json'
+
+url = 'https://dulce-affirmations-api.herokuapp.com/affirmation/index'
+
+# affirmation = JSON.parse(URI.open("#{url}").read).sample['phrase']
+
+
 
 puts "Creating Affirmations..."
-happy_aff = Reading.create(text: "I am responsible for my happiness, so I will choose to do the things that make me happy.")
+happy_aff = Reading.create(affirmations: JSON.parse(URI.open("#{url}").read))
 affirmations_therapy = Therapy.new(category: 'affirmations')
 affirmations_therapy.content = happy_aff
 affirmations_therapy.mood = happy
 affirmations_therapy.save
 
-meh_aff = Reading.create(text: "I am confident in myself and I radiate positive energy that draws people toward me.")
+
+
+meh_aff = Reading.create(affirmations: JSON.parse(URI.open("#{url}").read))
 affirmations_therapy = Therapy.new(category: 'affirmations')
 affirmations_therapy.content = meh_aff
 affirmations_therapy.mood = meh
 affirmations_therapy.save
 
-annoyed_aff = Reading.create(text: "I am in control of how I choose to approach and respond.")
+annoyed_aff = Reading.create(affirmations: JSON.parse(URI.open("#{url}").read))
 affirmations_therapy = Therapy.new(category: 'affirmations')
 affirmations_therapy.content = annoyed_aff
 affirmations_therapy.mood = annoyed
 affirmations_therapy.save
 
-anx_aff = Reading.create(text: " I am not in danger; I am just uncomfortable; this too will pass.")
+anx_aff = Reading.create(affirmations: JSON.parse(URI.open("#{url}").read))
 affirmations_therapy = Therapy.new(category: 'affirmations')
 affirmations_therapy.content = anx_aff
 affirmations_therapy.mood = anxious
 affirmations_therapy.save
 
-angry_aff = Reading.create(text: " I allow myself to acknowledge angry feelings without losing control.")
+angry_aff = Reading.create(affirmations: JSON.parse(URI.open("#{url}").read))
 affirmations_therapy = Therapy.new(category: 'affirmations')
 affirmations_therapy.content = angry_aff
 affirmations_therapy.mood = angry
 affirmations_therapy.save
 
-sad_aff = Reading.create(text: " I bring something wonderful to the table and that makes me happy.")
+sad_aff = Reading.create(affirmations: JSON.parse(URI.open("#{url}").read))
 affirmations_therapy = Therapy.new(category: 'affirmations')
 affirmations_therapy.content = sad_aff
 affirmations_therapy.mood = sad
