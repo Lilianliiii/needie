@@ -18,10 +18,12 @@
     <%= stylesheet_pack_tag 'application' %>
   </head>
 
-  <body class="relative h-screen bg-white">
+  <body class="flex flex-col justify-between h-screen bg-white">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+    <div class="">
     <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 
