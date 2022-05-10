@@ -71,8 +71,11 @@
     </li>
   </ul>
 
+  <div class="flex justify-center p-3">
+    <%= cl_image_tag current_user.avatar.key, class:"w-40 h-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2" %>
+
 <div class="flex justify-center p-3">
-  <%= cl_image_tag current_user.avatar.key, class:"w-40 h-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"%>
+  <%= cl_image_tag current_user.avatar.key, class:"w-40 h-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2" %>
 </div>
 
 <div class="py-3">
