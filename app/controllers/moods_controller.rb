@@ -9,7 +9,7 @@ class MoodsController < ApplicationController
     # @mood = Mood.find(params[:id])
     # also create user_mood if user is logged in
     if user_signed_in?
-      @user_mood = UserMood.create(user: current_user, mood: @mood, date: Date.today)
+      @user_mood = UserMood.create(user: current_user, mood: @mood)
       flash.now[:notice] = "Your Mood has been logged"
     end
 
