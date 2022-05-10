@@ -53,6 +53,7 @@
       <div id="question_9" class="flex justify-center font-headings text-neediegreen text-xl w-80">2</div>
       <br>
       <h1 class="font-headings text-neediegreen mb-3 font-semibold text-xl text-center trailing-wide">Activities and Personal Relationships<h1>
+      <br>
       <h2 class="font-headings mb-3 text-xl trailing-wide">11. Loss of interest in family, friends or colleagues</h2>
         <%= f.input :question_10, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_10", onInput:"updateQuestionTen(this.value)", class: "w-80" }  %>
       <div id="question_10" class="flex justify-center font-headings text-neediegreen text-xl w-80">2</div>
@@ -76,6 +77,7 @@
       <div id="question_16" class="flex justify-center font-headings text-neediegreen text-xl w-80">2</div>
       <br>
       <h1 class="font-headings text-neediegreen mb-3 font-semibold text-xl text-center trailing-wide">Physical Symptoms</h1>
+      <br>
       <h2 class="font-headings mb-3 text-xl trailing-wide">18. Feeling tired</h2>
         <%= f.input :question_17, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_17", onInput:"updateQuestionSeventeen(this.value)", class: "w-80" }  %>
       <div id="question_17" class="flex justify-center font-headings text-neediegreen text-xl w-80">2</div>
@@ -93,6 +95,7 @@
       <div id="question_21" class="flex justify-center font-headings text-neediegreen text-xl w-80">2</div>
       <br>
       <h1 class="font-headings text-neediegreen mb-3 font-semibold text-xl text-center trailing-wide">Suicidal Urge</h1>
+      <br>
       <h2 class="font-headings mb-3 text-xl trailing-wide">23. Do you have any suicidal thoughts?</h2>
         <%= f.input :question_22, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", list:"question_22", onInput:"updateQuestionTwentyTwo(this.value)", class: "w-80" }  %>
       <div id="question_22" class="flex justify-center font-headings text-neediegreen text-xl w-80">2</div>
