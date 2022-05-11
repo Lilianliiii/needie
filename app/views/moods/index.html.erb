@@ -34,9 +34,47 @@
   <% end %>
 </div>
 
-<div class="flex justify-center">
-<%= link_to "Feeling depressed?*", new_survey_path, class: "py-2 px-5 border rounded-3xl text-white bg-neediegreen lg:text-lg text-center mb-2" %>
+<div class="flex justify-center mb-5">
+  <button data-bs-toggle="modal" data-bs-target="#exampleModal" class= "py-2 px-5 border rounded-3xl text-white bg-neediegreen lg:text-lg text-center mb-2"> Feeling depressed?
+  </button>
 </div>
-<div class="flex justify-center mb-5 text-xs italic">
-<p>*Take the Burns depression checklist</p>
+
+<!-- Modal -->
+<div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog relative w-auto pointer-events-none">
+    <div
+      class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-2xl outline-none text-current">
+      <div
+        class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-lightgreen rounded-t-md">
+        <h5 class="lg:text-xl font-headings leading-normal text-neediegreen" id="exampleModalLabel">Do you think you might be depressed?</h5>
+        <button type="button"
+          class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body relative p-4 font-headings lg:text-base text-sm">
+        Take the Burns Depression Test to find out if you are feeling depressed. Used by professional therapists around the world, this assessment can help you evaluate your depression severity and track therapeutic progress. Take the test to discover suggested resources to help you manage your feelings of depression
+      </div>
+      <div
+        class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-lightgreen rounded-b-md">
+        <button type="button" class="px-6
+          py-2.5
+          bg-neediegreen
+          text-white
+          font-headings
+          text-xs
+          uppercase
+          rounded-2xl" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="px-6
+          py-2.5
+          bg-neediegreen
+          text-white
+          font-headings
+          text-xs
+          uppercase
+          rounded-2xl">  <%= link_to "Take the test!", new_survey_path, class:"hover:text-white" %>
+      </button>
+      </div>
+    </div>
+  </div>
 </div>
