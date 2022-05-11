@@ -1,29 +1,29 @@
 <div class="m-3">
   <div class="flex justify-center p-3">
-    <%= cl_image_tag current_user.avatar.key, class:"w-40 h-40 rounded-full ring ring-neediegreen ring-offset-base-100 ring-offset-2" %>
+    <%= cl_image_tag(current_user.avatar.key, class:"w-40 h-40 rounded-full ring ring-neediegreen ring-offset-base-100 ring-offset-2 object-cover") %>
   </div>
 
   <div class="">
-    <h1 class="text-4xl font-headings text-center text-gray-800">
+    <h1 class="lg:text-4xl text-3xl font-headings text-center text-gray-800">
         Hello <%= current_user.first_name %>
     </h1>
-    <h2 class="text-md text-center p-3 font-headings text-neediegreen">
+    <h2 class="lg:text-lg text-base text-center p-3 font-headings text-neediegreen">
         Welcome to your Needie profile
     </h2>
   </div>
 
   <div class="flex justify-center p-2 mb-2">
-    <%= link_to "View your past moods here", user_moods_path, class: "py-2 px-5 border rounded-3xl text-white bg-neediegreen lg:text-lg text-center" %>
+    <%= link_to "View your past moods here", user_moods_path, class: "py-2 px-5 border rounded-3xl text-white bg-neediegreen text-base text-center" %>
   </div>
 
   <div class="py-1">
     <h2 class="text-lg text-center font-headings text-neediegreen">
       Your Past <strong>Burns</strong> Checklist Scores:
     </h2>
-    <div class="text-md text-center">
+    <div class="lg:text-base text-sm text-center">
       <% @surveys.each do |survey| %>
-        <ul>
-          <li> - You scored <strong><%= survey.score %></strong> which is an indicator of
+        <ul class="my-2">
+          <li class="inline-block"> <%= cl_image_tag("bxs-calendar-edit_ucgfjf", class:"lg:w-8 lg:h-8 w-5 h-5 inline-block") %> You scored <strong><%= survey.score %></strong> which is an indicator of
           <% if survey.score  >= 0 && survey.score <= 5 %>
             <strong><%= 'no depression' %></strong>
           <% elsif survey.score > 5 && survey.score <= 10 %>

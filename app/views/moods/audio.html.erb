@@ -1,9 +1,9 @@
 <div class="flex justify-center">
   <div class="p-3">
-    <%= cl_image_tag("audio_khjy1w", class:"w-20 h-20") %>
+    <%= cl_image_tag("audio_khjy1w", class:"lg:w-20 lg:h-20 w-16 h-16") %>
   </div>
   <div class="justify-center mt-5">
-    <h1 class="font-headings lg:text-lg">Which audio option can help you?</h1>
+    <h1 class="font-headings lg:text-lg text-sm">Which audio option can help you?</h1>
   </div>
 </div>
 
@@ -11,17 +11,17 @@
 <div class="flex flex-wrap justify-center my-5 space-x-8">
   <% @therapies.each do |therapy| %>
     <%= link_to audio_path(therapy.content), class:"flex justify-center" do %>
-      <div class="justify-center shadow-lg shadow-lightgreen w-40 h-60 px-3 py-14 mb-5">
+      <div class="justify-center shadow-lg shadow-lightgreen w-36 h-56 px-3 py-14 mb-5">
         <% if therapy.sub_category == "music" %>
           <div class="flex justify-center">
-            <%= cl_image_tag("music_rqjazw", class:"w-24 h-24") %>
+            <%= cl_image_tag("music_rqjazw", class:"w-20 h-20") %>
           </div>
-            <h5 class="font-headings text-xl text-lightgreen text-center mx-3 py-3">Music</h5>
+            <h5 class="font-headings text-base text-lightgreen text-center mx-3 py-3">Music</h5>
           <% else %>
           <div class="flex justify-center">
-            <%= cl_image_tag("podcast_praz0v", class:"w-24 h-24") %>
+            <%= cl_image_tag("podcast_praz0v", class:"w-20 h-20") %>
           </div>
-            <h5 class="font-headings text-xl text-lightgreen text-center mx-3 py-3">Podcast</h5>
+            <h5 class="font-headings text-base text-lightgreen text-center mx-3 py-3">Podcast</h5>
         <% end %>
       </div>
     <% end %>

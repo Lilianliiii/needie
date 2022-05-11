@@ -8,11 +8,11 @@
       <% if user_signed_in?%>
 
       <button data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <%= link_to "Save Score", survey_path(@survey), method: :patch, class: "font-headings py-2 px-5 border rounded-full text-white bg-neediegreen w-48" %>
+        <%= link_to "Save Score", survey_path(@survey), method: :patch, class: "font-headings py-2 px-5 border rounded-full text-white bg-neediegreen w-48 text-base" %>
       </button>
       <% else %>
-        <%= link_to "Sign up to save score", new_user_registration_path(survey: @survey.id), class: "font-headings py-2 px-4 border rounded-full text-white bg-neediegreen w-54 m-2" %>
-        <%= link_to " Log in to save score", new_user_session_path(survey: @survey.id), class: "font-headings py-2 px-4 border rounded-full text-white bg-neediegreen w-54 m-2" %>
+        <%= link_to "Sign up to save score", new_user_registration_path(survey: @survey.id), class: "font-headings py-2 px-4 border rounded-full text-white bg-neediegreen w-54 m-2 text-base" %>
+        <%= link_to " Log in to save score", new_user_session_path(survey: @survey.id), class: "font-headings py-2 px-4 border rounded-full text-white bg-neediegreen w-54 m-2 text-base" %>
       <% end %>
     </div>
 

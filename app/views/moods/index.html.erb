@@ -9,7 +9,7 @@
       <h1 class="lg:text-4xl text-3xl font-headings font-bold text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)">
         Welcome to Needie
       </h1>
-      <p class="text-xl font-headings text-white" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)">
+      <p class="text-xl font-headings text-white my-2" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2)">
       How are you feeling today?
       </p>
     </div>
@@ -34,6 +34,9 @@
   <% end %>
 </div>
 
-<div class="flex justify-center mb-5">
-<%= link_to "Feeling depressed?", new_survey_path, class: "py-2 px-5 border rounded-3xl text-white bg-neediegreen lg:text-lg text-center" %>
+<div class="flex justify-center">
+<%= link_to "Feeling depressed?*", new_survey_path, class: "py-2 px-5 border rounded-3xl text-white bg-neediegreen lg:text-lg text-center mb-2" %>
+</div>
+<div class="flex justify-center mb-5 text-xs italic">
+<p>*Take the Burns depression checklist</p>
 </div>
