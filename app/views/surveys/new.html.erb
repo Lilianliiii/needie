@@ -1,5 +1,5 @@
  <div class="flex justify-center content-center">
-  <div class="lg:w-1/2 lg:m-5 shadow rounded-3xl p-5">
+  <div class="lg:w-11/12 lg:m-5 p-5">
     <h1 class="font-headings text-center text-2xl text-neediegreen">This is the <strong>Burns Depression Checklist</strong></h1>
     <br>
     <h1 class="font-headings text-center lg:text-xl mx-3">This is a self assessment to rate your own symptoms for indicators of depression.</h1>
@@ -8,7 +8,7 @@
       experienced each symptom during the past week according to the table below, including today. Please answer all 25 items.</h2>
     <br>
     <div class="flex justify-center border-neediegreen border-1 rounded-3xl lg:m-3 m-2">
-      <ul class="lg:flex sm:flex-wrap justify-center font-headings lg:text-md">
+      <ul class="lg:flex sm:flex-wrap justify-center font-headings lg:text-base text-sm">
         <li class="lg:m-3 m-1"><strong>0</strong> = Not at all</li>
         <li class="lg:m-3 m-1"><strong>1</strong> = Somewhat</li>
         <li class="lg:m-3 m-1"><strong>2</strong> = Moderately</li>
@@ -22,10 +22,10 @@
       <h1 class="font-headings text-neediegreen mb-3 font-semibold lg:text-xl trailing-wide text-center">Thoughts and Feelings</h1>
       <br>
 
-      <h2 class="font-headings mb-3 lg:text-xl ml-8">1. Feeling sad or down in the dumps</h2>
+      <h2 class="font-headings mb-3 lg:text-xl text-base ml-8">1. Feeling sad or down in the dumps</h2>
         <div class="flex ml-8">
           <%= f.input :question_0, label: false, collection: 0..4, as: :range, input_html:{ min:"0", max:"4",step:"1", value: "0", list:"question_0", onInput:"updateQuestionZero(this.value)", class: "lg:w-80 w-48" } %>
-        <span id="question_0" class="lg:px-24 px-20 font-headings text-neediegreen lg:text-2xl font-bold">0</span>
+        <span id="question_0" class="lg:px-24 px-20 font-headings text-neediegreen lg:text-2xl font-bold text-base">0</span>
         </div>
 
       <h2 class="font-headings mb-3 lg:text-xl ml-8">2. Feeling unhappy or blue</h2>
