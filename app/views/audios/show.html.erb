@@ -4,22 +4,65 @@
       <div class="flex justify-center p-3">
         <%= cl_image_tag("music_rqjazw", class:"w-16 h-16") %>
         <div class="mx-2">
-          <h1 class="font-headings font-bold text-base">So you're feeling <%= (@audio.therapy.mood.name).downcase %> and you want to listen to <%= @audio.therapy.sub_category %>?</h1>
-          <h1 class="font-headings text-base my-2">Press play on the following playlist:</h1>
+          <h1 class="font-headings font-bold lg:text-base text-md">Feeling <%= (@audio.therapy.mood.name).downcase %>? Wanna listen to some <%= @audio.therapy.sub_category %>?</h1>
+          <h1 class="font-headings lg:text-base text-sm my-2">Try this playlist!</h1>
         </div>
     <% else %>
     <div class="flex justify-center p-3">
       <%= cl_image_tag("podcast_praz0v", class:"w-16 h-16") %>
       <div class="mx-2">
-        <h1 class="font-headings font-bold lg:text-base">So you're feeling <%= (@audio.therapy.mood.name).downcase %> and you want to listen to a <%= @audio.therapy.sub_category %>?</h1>
-        <h1 class="font-headings text-base my-2">Press play on the following podcast:</h1>
+        <h1 class="font-headings font-bold lg:lg:text-base text-md">Feeling <%= (@audio.therapy.mood.name).downcase %>? Want to listen to a <%= @audio.therapy.sub_category %>?</h1>
+        <h1 class="font-headings lg:text-base text-sm my-2">Try these podcasts!</h1>
       </div>
       <% end %>
     </div>
 
+
     <div class="flex justify-center m-2">
       <iframe style="border-radius:12px" src=<%= @audio.therapy.content.link %> width="80%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     </div>
+  </div>
+</div>
+
+<!-- Spotify API Codes problem with iteration
+    <ul id="episodes">
+      <li>
+        <button data-spotify-id="spotify:episode:5ci03QuHssa6lpPk5qbL0Q">
+          Episode 1
+        </button>
+      </li>
+      <li>
+        <button data-spotify-id="spotify:episode:11Dn2Xq4fLorudTOxcEuLl">
+          Episode 2
+        </button>
+      </li>
+      <li>
+        <button data-spotify-id="spotify:episode:6I3ZzCxRhRkNqnQNo8AZPV">
+          Episode 3
+        </button>
+      </li>
+    </ul>
+
+    <div id="embed-iframe">Podcast Player (Do not remove)</div>
 
   </div>
 </div>
+
+<script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+
+<script>
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+  let element = document.getElementById('embed-iframe');
+  let options = {
+      uri: 'spotify:episode:5ci03QuHssa6lpPk5qbL0Q'
+    };
+  let callback = (EmbedController) => { document.querySelectorAll('ul#episodes > li > button').forEach(
+    episode => {
+      episode.addEventListener('click', () => {
+        EmbedController.loadUri(episode.dataset.spotifyId)
+      });
+    })};
+  IFrameAPI.createController(element, options, callback);
+};
+</script>
+-->
