@@ -1,40 +1,40 @@
 <%= render 'shared/flashes' %>
 <div class="px-5">
-  <h1 class="font-headings font-bold lg:text-lg">So you're feeling <%= @mood.name %>...</h1>
-  <h1 class="font-headings lg:text-lg">Which of the following options can help you?</h1>
+  <h1 class="font-headings font-bold lg:text-lg text-base">So you're feeling <%= @mood.name %>...</h1>
+  <h1 class="font-headings lg:text-lg text-base my-2">Which of the following options can help you?</h1>
 </div>
 
-<div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-3 justify-center items-center flex-wrap p-3 md:ml-10">
+<div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 gap-2 justify-center items-center flex-wrap p-3 md:ml-10">
   <%= link_to audio_mood_path, class:"hover:text-neediegreen" do %>
     <div class="p-4 lg:w-52 text-center justify-between">
     <div class="flex justify-center">
-      <%= cl_image_tag("audio_khjy1w", class:"w-24 h-24") %>
+      <%= cl_image_tag("audio_khjy1w", class:"w-20 h-20") %>
     </div>
-      <h5 class="font-headings italic justify-center m-3 lg:text-lg">Audio</h5>
+      <h5 class="font-headings italic justify-center m-3 text-base">Audio</h5>
     </div>
   <% end %>
   <%= link_to affirmations_mood_path, class:"hover:text-neediegreen" do %>
     <div class="p-4 lg:w-52 text-center justify-between">
     <div class="flex justify-center">
-      <%= cl_image_tag("affirmations_or7j1g", class:"w-24 h-24") %>
+      <%= cl_image_tag("affirmations_or7j1g", class:"w-20 h-20") %>
     </div>
-      <h5 class="font-headings italic justify-center m-3 lg:text-lg">Affirmations</h5>
+      <h5 class="font-headings italic justify-center m-3 text-base">Affirmations</h5>
     </div>
   <% end %>
   <%= link_to movement_mood_path, class:"hover:text-neediegreen" do %>
     <div class="p-4 lg:w-52 text-center justify-between">
     <div class="flex justify-center">
-      <%= cl_image_tag("movement_h7jzjf", class:"w-24 h-24") %>
+      <%= cl_image_tag("movement_h7jzjf", class:"w-20 h-20") %>
     </div>
-      <h5 class="font-headings italic justify-center m-3 lg:text-lg">Movement</h5>
+      <h5 class="font-headings italic justify-center m-3 text-base">Movement</h5>
     </div>
   <% end %>
   <%= link_to goodvibes_mood_path, class:"hover:text-neediegreen" do %>
     <div class="p-4 lg:w-52 text-center justify-between">
     <div class="flex justify-center">
-      <%= cl_image_tag("goodvibes_twiive", class:"w-24 h-24") %>
+      <%= cl_image_tag("goodvibes_twiive", class:"w-20 h-20") %>
     </div>
-      <h5 class="font-headings italic justify-center m-3 lg:text-lg">Good Vibes</h5>
+      <h5 class="font-headings italic justify-center m-3 text-base">Good Vibes</h5>
     </div>
   <% end %>
 </div>
