@@ -30,6 +30,7 @@ function updateQuestionZero(value){
 }
 
 console.log("test")
+
 document.addEventListener('turbolinks:load', () => {
   console.log("load")
   initMapbox();
