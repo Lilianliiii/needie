@@ -2,13 +2,13 @@
   <div class="p-3">
     <%= cl_image_tag("goodvibes_twiive", class:"lg:w-20 lg:h-20 w-16 h-16") %>
   </div>
-  <div class="justify-center mt-5">
+  <div class="justify-center mt-4">
     <h1 class="font-headings lg:text-lg text-base">Which good vibes option can help you?</h1>
   </div>
 </div>
 
 <%# <div class="grid lg:grid-cols-2 grid-cols-2 m-3 place-items-center"> %>
-<div class="flex flex-wrap justify-center m-3 space-x-5">
+<div class="flex flex-wrap justify-center my-3 space-x-8">
   <% @therapies.each do |therapy| %>
     <% if therapy.content_type == 'Reading' %>
       <%= link_to reading_path(therapy.content) do %>
