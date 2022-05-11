@@ -4,8 +4,8 @@
       <div class="flex justify-center p-3">
         <%= cl_image_tag("walking_c2qkol", class:"w-16 h-16") %>
         <div class="mx-2">
-          <h1 class="font-headings font-bold text-base">So you're feeling <%= (@walk.therapy.mood.name).downcase %> and you want to go on a <%= @walk.therapy.sub_category %>?</h1>
-          <h1 class="font-headings text-base my-2">Follow the below route:</h1>
+          <h1 class="font-headings font-bold text-md">Feeling <%= (@walk.therapy.mood.name).downcase %>? Wanna go for a <%= @walk.therapy.sub_category %>?</h1>
+          <h1 class="font-headings text-base my-2">Here's a route for you to walk it out.</h1>
         </div>
       </div>
       <div id="map" class="my-4"
