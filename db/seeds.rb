@@ -218,13 +218,13 @@ puts "Songs Created"
 
 puts "Creating Podcasts..."
 
-happy_podcast = Audio.create(link: "https://open.spotify.com/embed/show/7F6YqGJ06UEuD7qG81tFHw?utm_source=generator")
+happy_podcast = Audio.create(link: "https://open.spotify.com/embed/playlist/1gyn0ULkepabs3u3Pa4Mdt?utm_source=generator")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = happy_podcast
 audio_podcast_therapy.mood = happy
 audio_podcast_therapy.save
 
-meh_podcast = Audio.create(link: "https://open.spotify.com/embed/show/3i5TCKhc6GY42pOWkpWveG?utm_source=generator")
+meh_podcast = Audio.create(link: "https://open.spotify.com/embed/playlist/59b7vu48XZcV9A6g5pW9FL?utm_source=generator")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = meh_podcast
 audio_podcast_therapy.mood = meh
