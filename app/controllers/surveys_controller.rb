@@ -1,4 +1,5 @@
 class SurveysController < ApplicationController
+  before_action :show_moods, only: :show
   def new
     @survey = Survey.new
   end
@@ -46,6 +47,10 @@ class SurveysController < ApplicationController
   end
 
   private
+
+  def show_moods
+    @moods = Mood.all
+  end
 
   def score
     # survey_params
