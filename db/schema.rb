@@ -119,7 +119,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_074435) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "date", default: "2022-05-12 00:00:00"
+    t.datetime "date", default: "2022-05-13 00:00:00"
     t.index ["mood_id"], name: "index_user_moods_on_mood_id"
     t.index ["user_id"], name: "index_user_moods_on_user_id"
   end
