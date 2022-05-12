@@ -15,7 +15,7 @@
           <%= cl_image_tag("meditation_azdo5p", class:"w-16 h-16") %>
           <div class="mx-2">
             <h1 class="font-headings font-bold text-md">Feeling <%= (@video.therapy.mood.name).downcase %>? Try some <%= @video.therapy.sub_category %>?</h1>
-            <h1 class="font-headings text-base my-2">A meditation practice can help you be more mindful everyday.</h1>
+            <h1 class="font-headings text-base my-2">A meditation practice can help you be more mindful everyday</h1>
           </div>
         </div>
       <% elsif @video.therapy.sub_category == 'breathwork' %>
@@ -23,7 +23,7 @@
           <%= cl_image_tag("breathwork_eapavr", class:"w-16 h-16") %>
           <div class="mx-2">
             <h1 class="font-headings font-bold text-md">Feeling <%= (@video.therapy.mood.name).downcase %>? Try some <%= @video.therapy.sub_category %>?</h1>
-            <h1 class="font-headings text-base my-2">Breathwork is a quick way to recenter yourself.</h1>
+            <h1 class="font-headings text-base my-2">Breathwork is a quick way to recenter yourself</h1>
           </div>
         </div>
       <% end %>
