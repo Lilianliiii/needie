@@ -3,22 +3,22 @@
 <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async>
 </script>
 
-<script type="text/javascript">
-  window.onSpotifyIframeApiReady = (IFrameAPI) => {
-    let element = document.getElementById('embed-iframe');
-    let options = {
-      width: '80%',
-      height: '200',
-      uri: 'spotify:episode:<%= @audio.therapy.content.link %>'
+    <script type="text/javascript">
+      window.onSpotifyIframeApiReady = (IFrameAPI) => {
+        let element = document.getElementById('embed-iframe');
+        let options = {
+            width: '80%',
+            height: '200',
+            uri: 'spotify:episode:<%= @audio.therapy.content.link %>'
           };
-    let callback = (EmbedController) => {
-      document.querySelectorAll('ul#episodes > li > button').forEach(
-        episode => {
-          episode.addEventListener('click', () => {
-          EmbedController.loadUri(episode.dataset.spotifyId)
-            });
-          })
+        let callback = (EmbedController) => {
+          document.querySelectorAll('ul#episodes > li > button').forEach(
+            episode => {
+              episode.addEventListener('click', () => {
+                EmbedController.loadUri(episode.dataset.spotifyId)
+              });
+            })
         };
         IFrameAPI.createController(element, options, callback);
-        };
-</script>
+      };
+    </script>
