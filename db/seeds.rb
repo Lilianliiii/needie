@@ -218,37 +218,37 @@ puts "Songs Created"
 
 puts "Creating Podcasts..."
 
-happy_podcast = Audio.create(link: "https://open.spotify.com/embed/playlist/1gyn0ULkepabs3u3Pa4Mdt?utm_source=generator")
+happy_podcast = Audio.create(link: "36EEU29vyV7dols2bKEnmR")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = happy_podcast
 audio_podcast_therapy.mood = happy
 audio_podcast_therapy.save
 
-meh_podcast = Audio.create(link: "https://open.spotify.com/embed/playlist/59b7vu48XZcV9A6g5pW9FL?utm_source=generator")
+meh_podcast = Audio.create(link: "0v2bLHCSWxrhTfqhQSzngf")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = meh_podcast
 audio_podcast_therapy.mood = meh
 audio_podcast_therapy.save
 
-annoyed_podcast = Audio.create(link: "https://open.spotify.com/embed/playlist/4Jshcu8tQRPIdd5irpgqNw?utm_source=generator")
+annoyed_podcast = Audio.create(link: "1R1qx4NCgLUQNqsRwCYOp6")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = annoyed_podcast
 audio_podcast_therapy.mood = annoyed
 audio_podcast_therapy.save
 
-anx_podcast = Audio.create(link: "https://open.spotify.com/embed/playlist/2wm1a5pss8VuibE3gsZVXv?utm_source=generator")
+anx_podcast = Audio.create(link: "6qSEmYXIOxhVSTsw4e0kSD")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = anx_podcast
 audio_podcast_therapy.mood = anxious
 audio_podcast_therapy.save
 
-angry_podcast = Audio.create(link: "https://open.spotify.com/embed/playlist/4vza8ZCaYViCgE4Xzj1jHc?utm_source=generator")
+angry_podcast = Audio.create(link: "4nTAHenaqn4ZaV1zX6pDQx")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = angry_podcast
 audio_podcast_therapy.mood = angry
 audio_podcast_therapy.save
 
-sad_podcast = Audio.create(link: "https://open.spotify.com/embed/playlist/4c6vPOfgyywXftAUo3xVw0?utm_source=generator")
+sad_podcast = Audio.create(link: "2y2vlxXQpE7pQcNl12nxId")
 audio_podcast_therapy = Therapy.new(category: 'audio', sub_category: 'podcast')
 audio_podcast_therapy.content = sad_podcast
 audio_podcast_therapy.mood = sad

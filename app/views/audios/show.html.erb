@@ -6,104 +6,22 @@
         <div class="mx-2">
           <h1 class="font-headings font-bold lg:text-base text-md">Feeling <%= (@audio.therapy.mood.name).downcase %>? Wanna listen to some <%= @audio.therapy.sub_category %>?</h1>
           <h1 class="font-headings lg:text-base text-sm my-2">Try this playlist!</h1>
+          <br>
+          <div class="flex justify-center m-2">
+            <iframe style="border-radius:12px" src=<%= @audio.therapy.content.link %> width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
         </div>
+
     <% else %>
-    <div class="flex justify-center p-3">
-      <%= cl_image_tag("podcast_praz0v", class:"w-16 h-16") %>
-      <div class="mx-2">
-        <h1 class="font-headings font-bold lg:lg:text-base text-md">Feeling <%= (@audio.therapy.mood.name).downcase %>? Want to listen to a <%= @audio.therapy.sub_category %>?</h1>
-        <h1 class="font-headings lg:text-base text-sm my-2">Try these podcasts!</h1>
+      <div class="flex justify-center p-3">
+        <%= cl_image_tag("podcast_praz0v", class:"w-16 h-16") %>
+        <div class="mx-2">
+          <h1 class="font-headings font-bold lg:lg:text-base text-md">Feeling <%= (@audio.therapy.mood.name).downcase %>? Want to listen to a <%= @audio.therapy.sub_category %>?</h1>
+          <h1 class="font-headings lg:text-base text-sm my-2">Try this podcast!</h1>
+        </div>
+        <br>
       </div>
+      <%= render 'podcasts' %>
       <% end %>
-    </div>
-
-
-    <div class="flex justify-center m-2">
-      <iframe style="border-radius:12px" src=<%= @audio.therapy.content.link %> width="80%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    </div>
   </div>
 </div>
-
-<!--spotify API method (cannot be used with current model and schema to differentiate between podcasts and playlists)
-
-<style>
-  body {
-    font: 0.7rem sans-serif;
-  }
-
-  h1 {
-    margin:  10px;
-  }
-
-  ul#episodes {
-    float: left;
-    margin:  0 10px;
-    padding: 0;
-    width: 35%;
-  }
-
-  ul#episodes > li {
-    list-style-type: none;
-  }
-
-  button {
-    border-radius:  7px;
-    border: 0;
-    background: #191414;
-    color: #fff;
-    padding:  10px;
-    margin:  0 0 3px 0;
-    width: 100%;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background: #1Db954;
-  }
-
-
-</style>
-  </head>
-  <body>
-    <h1>Pick an episode...</h1>
-    <ul id="episodes">
-      <li>
-        <button data-spotify-id="spotify:episode:7makk4oTQel546B0PZlDM5">
-          My Path to Spotify: Women in Engineering
-        </button>
-      </li>
-      <li>
-        <button data-spotify-id="spotify:episode:43cbJh4ccRD7lzM2730YK3">
-          What is Backstage?
-        </button>
-      </li>
-      <li>
-        <button data-spotify-id="spotify:episode:6I3ZzCxRhRkNqnQNo8AZPV">
-          Introducing Nerd Out@Spotify
-        </button>
-      </li>
-    </ul>
-
-    <div id="embed-iframe"></div>
-    <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async>
-    </script>
-    <script type="text/javascript">
-      window.onSpotifyIframeApiReady = (IFrameAPI) => {
-        let element = document.getElementById('embed-iframe');
-        let options = {
-            width: '60%',
-            height: '200',
-            uri: 'spotify:episode:7makk4oTQel546B0PZlDM5'
-          };
-        let callback = (EmbedController) => {
-          document.querySelectorAll('ul#episodes > li > button').forEach(
-            episode => {
-              episode.addEventListener('click', () => {
-                EmbedController.loadUri(episode.dataset.spotifyId)
-              });
-            })
-        };
-        IFrameAPI.createController(element, options, callback);
-      };
-    </script>
-    -->
