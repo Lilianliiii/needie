@@ -18,22 +18,6 @@ class SurveysController < ApplicationController
 
   def show
     @survey = Survey.find(params[:id])
-
-    # @survey.score
-
-    # score
-    # puts score
-    # if score >= 0 && score <= 5
-    #   puts "No depression"
-    # elsif score > 5 && score <= 10
-    #   puts "Normal but unhappy"
-    # elsif score > 10 && score <= 25
-    #   puts "Mild Depression"
-    # elsif score > 25 && score <= 50
-    #   puts "Severe Depression"
-    # elsif score > 50 && score <= 100
-    #   puts "Extreme Depression"
-    # end
   end
 
   def update
