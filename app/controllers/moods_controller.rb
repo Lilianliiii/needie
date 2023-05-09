@@ -35,5 +35,4 @@ class MoodsController < ApplicationController
   def find_mood
     @mood = Mood.find(params[:id])
   end
-  # user cannot CREATE a NEW mood or EDIT or Update or Destroy
 end

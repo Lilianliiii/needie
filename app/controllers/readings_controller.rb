@@ -4,7 +4,4 @@ class ReadingsController < ApplicationController
     @reading = Reading.find(params[:id])
   end
 
-
-
-
 end
